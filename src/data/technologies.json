@@ -110,7 +110,8 @@
     {
       "text": "Golang",
       "logo": "mdi:language-go",
-      "hoverColor": "#00ADD8"
+      "hoverColor": "#00ADD8",
+      "inProgress": true
     }
   ],
   "Databases": [
@@ -173,7 +174,8 @@
     {
       "text": "AWS",
       "logo": "",
-      "hoverColor": "#FF9900"
+      "hoverColor": "#FF9900",
+      "inProgress": true
     }
   ],
   

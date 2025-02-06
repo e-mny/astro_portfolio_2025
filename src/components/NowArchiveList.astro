@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+
+// Fetch all archived Now pages
+const archives = await getCollection('now');
+
+// Sort by date (newest first)
+archives.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+---
+
+<aside class="w-[30vw] hidden lg:block fixed left-0 top-24 px-4">
+  <h3 class="text-lg font-semibold mb-2 dark:text-white">📜 Archives</h3>
+  <ul class="space-y-2">
+    {archives.map((archive) => (
+      <li>
+        <a href={`/now/${archive.slug}`} class="block p-2 text-zinc-600 dark:text-zinc-400 hover:text-blue-500">
+          {archive.data.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+</aside>

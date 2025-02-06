@@ -7,8 +7,8 @@
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
   font-family: "Roboto", sans-serif;
-}
 
+}
 body::-webkit-scrollbar {
   width: 0.4rem;
 }
@@ -49,8 +49,8 @@ body::-webkit-scrollbar-thumb:hover {
   transition: all 0.15s ease-in-out;
   background-image: linear-gradient(
     to right,
-    #1e80ff,
-    #1e80ff
+    #a8d0e6,
+    #a8d0e6
   );
 }
 

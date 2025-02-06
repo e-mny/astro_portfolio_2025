@@ -66,7 +66,7 @@ const description = "Here are some of the projects I have worked on, including o
            description={description}>
   <Header title="My Projects" />
   <p
-    class="max-w-prose mb-10 font-normal dark:text-zinc-400 text-zinc-600 leading-relaxed"
+    class="max-w-prose ml-6 mb-10 font-normal dark:text-zinc-400 text-zinc-600 leading-relaxed"
   >
     {description}
   </p>
@@ -81,7 +81,7 @@ const description = "Here are some of the projects I have worked on, including o
             role={project.role}
             url={project.url}
             languages={project.languages}
-            addClass="lg:col-span-3"
+            addClass="lg:col-span-3 aspect-square"
           />
         ) : (
           <ProjectCard

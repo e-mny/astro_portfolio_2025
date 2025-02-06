@@ -10,6 +10,36 @@ module.exports = {
         roboto: ['Roboto Mono', 'sans-serif'],
         sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        // Primary blue
+        bluePrimary: '#1e80ff',
+
+        // Accent colors
+        yellowAccent: '#FFD700', // or #F5A623
+        pinkAccent: '#FF6F61', // or #F28D8C
+
+        // Neutral colors
+        lightGray: '#F5F5F5', // or #EAEAEA
+        white: '#FFFFFF',
+        slateBlue: '#6A5ACD',
+        offWhite: '#F9F9F9', // or #FAFAFA
+        
+        // Hover/Interactive
+        cyanHover: '#A2DFF7', // or #4DB8FF
+        
+        
+        charcoalGray: '#9f9fa9',
+        primary: "#1e80ff", // Blue
+        dark: "#121212", // Dark Gray
+        light: "#f6f6f6", // Light Gray
+        sky: "#a8d0e6", // Pastel Sky Blue
+        lavender: "#c3aed6", // Pastel Lavender
+        blush: "#f7d1cd", // Soft Blush Pink
+        beige: "#f5e6ca", // Warm Beige
+        mint: "#c5e4c7", // Cool Mint Green
+        error: "#ff6b6b", // Soft Red
+        success: "#c5e4c7" // Mint Green
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {

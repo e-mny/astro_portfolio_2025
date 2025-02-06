@@ -1,0 +1,23 @@
+---
+import type { } from "astro:content";
+import AppLayout from "@layouts/AppLayout.astro";
+import ArchiveList from "@components/NowArchiveList.astro";
+
+const { slug } = Astro.params;
+const archive = await getEntryBySlug('now', slug);
+if (!archive) throw new Error("Archive not found");
+---
+
+<AppLayout title={archive.data.title}>
+  <div class="flex">
+    <ArchiveList />
+
+    <article class="prose dark:prose-invert flex-1 ml-64 px-6">
+      <h1>{archive.data.title}</h1>
+      <p class="text-sm text-zinc-500">Published on {new Date(archive.data.date).toLocaleDateString()}</p>
+      <div class="mt-4">
+        {archive.body}
+      </div>
+    </article>
+  </div>
+</AppLayout>
