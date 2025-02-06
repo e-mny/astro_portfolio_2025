@@ -1,0 +1,72 @@
+{
+  "name": "enoch_mok",
+  "version": "1.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "format": "prettier -w '**/*.{js,jsx,cjs,ts,tsx,astro}'",
+    "preview": "astro preview",
+    "lint": "eslint . --max-warnings 0 --report-unused-disable-directives",
+    "test": "astro test",
+    "test:watch": "astro test --watch"
+  },
+  "devDependencies": {
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/tailwind": "^6.0.0",
+    "@fontsource-variable/inter": "^5.1.1",
+    "@fontsource/inter": "^5.1.1",
+    "@fontsource/roboto-mono": "^5.1.1",
+    "@resvg/resvg-js": "^2.4.1",
+    "@tailwindcss/typography": "^0.5.10",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "astro": "^5.2.5",
+    "astro-expressive-code": "^0.38.3",
+    "astro-icon": "^0.8.1",
+    "eslint": "^8.50.0",
+    "eslint-plugin-astro": "^0.29.0",
+    "prettier-plugin-astro": "^0.12.0",
+    "satori": "^0.10.8",
+    "satori-html": "^0.3.2",
+    "sharp": "^0.32.6",
+    "tsm": "^2.3.0"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.0.8",
+    "@astrojs/netlify": "^6.1.0",
+    "@astrojs/preact": "^4.0.4",
+    "@astrojs/react": "^4.2.0",
+    "@octokit/core": "^4.2.4",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "astro-compressor": "^0.4.1",
+    "dayjs": "^1.11.13",
+    "mdast-util-to-string": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "reading-time": "^1.5.0",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-slug": "^6.0.0",
+    "rehype-stringify": "^10.0.1",
+    "rehype-toc": "^3.0.2",
+    "remark-toc": "^9.0.0",
+    "tailwindcss": "^3.3.3",
+    "typescript-esbuild": "^0.2.22",
+    "vite-plugin-compress": "^2.1.1"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cojocaru-david/cojocarudavid.me.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cojocaru-david/cojocarudavid.me/issues"
+  },
+  "homepage": "https://cojocarudavid.me",
+  "private": false
+}

@@ -1,0 +1,47 @@
+---
+import BlogLayout from "@layouts/BlogLayout.astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import type { MarkdownHeading } from 'astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  const headings = await Promise.all(
+    posts.map(async (post) => {
+      const data = await post.render();
+      return data.headings;
+    })
+  );
+
+  return posts.map((post, index) => ({
+    params: { slug: post.slug },
+    props: { post, headings: headings[index] },
+  }));
+}
+
+type Props = {
+  post: CollectionEntry<'blog'>;
+  headings: MarkdownHeading[];
+};
+
+const {post, headings} = Astro.props;
+const frontmatter = post.data;
+const { Content, remarkPluginFrontmatter } = await post.render();
+---
+
+<BlogLayout
+  title={frontmatter.title}
+  pubDate={frontmatter.pubDate}
+  image={frontmatter.hero}
+  imageAlt={frontmatter.heroAlt}
+  description={frontmatter.description}
+  url={post.slug}
+  updatedDate={frontmatter.updatedDate}
+  tags={frontmatter.tags}
+  minutesRead={remarkPluginFrontmatter.minutesRead}
+  lastModified={remarkPluginFrontmatter.lastModified}
+  headings={headings}
+>
+  <Content />
+</BlogLayout>

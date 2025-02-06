@@ -1,0 +1,35 @@
+---
+import { author, email } from "@data/socials";
+import Icon from "astro-icon";
+---
+
+<!-- <script>
+    const currentYear = new Date().getFullYear();
+    const yearElement = document.getElementById('year');
+    yearElement.innerText = currentYear;
+</script> -->
+<footer
+  class="flex items-center text-zinc-400 mt-7 justify-center h-16 w-full flex-col gap-1"
+>
+  <div class="text-sm text-center cursor-default">
+    &copy;&nbsp;2025 |
+    <a
+      href=`mailto:${email}`
+      class="text-zinc-200 hover:text-zinc-500"
+      title="Email"
+      rel="noopener noreferrer"
+    >
+      {author}
+      <Icon name="mdi:email" class="w-4 h-4 items-center inline-flex align-middle" />
+    </a>
+  </div>
+  <div class="text-sm text-center flex items-center justify-center">
+    Made with too many cups of coffee.
+  </div>
+  <div class="text-sm text-center flex items-center justify-center">
+  Design inspired by 
+  <a href="https://github.com/cojocaru-david/cojocarudavid.me" rel="noopener noreferrer" class="mx-2 underline">Cojocaru</a>
+  & <a href="https://astro.build/themes/details/astropaper/" rel="noopener noreferrer" class="ml-2 underline">AstroPaper</a>
+</div>
+
+</footer>

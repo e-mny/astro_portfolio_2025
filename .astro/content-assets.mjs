@@ -1,0 +1,8 @@
+
+import __ASTRO_IMAGE_IMPORT_gGHlB from "~/assets/heros/mobile_website_optimization_best_practices.png?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fmobile-website-optimization-best-practices.md";
+import __ASTRO_IMAGE_IMPORT_2aMn1o from "~/assets/heros/pwa_intro.png?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fintroduction-pwas.md";
+import __ASTRO_IMAGE_IMPORT_Z7uKsV from "~/assets/heros/tailwindcss.png?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fwhat-is-tailwind.md";
+import __ASTRO_IMAGE_IMPORT_ELigK from "~/assets/heros/nginx_secure.png?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Finstall-nginx-secure.md";
+import __ASTRO_IMAGE_IMPORT_LVTlv from "~/assets/heros/astro_dark.png?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fdark-mode-in-astro.md";
+export default new Map([["~/assets/heros/mobile_website_optimization_best_practices.png?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fmobile-website-optimization-best-practices.md", __ASTRO_IMAGE_IMPORT_gGHlB], ["~/assets/heros/pwa_intro.png?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fintroduction-pwas.md", __ASTRO_IMAGE_IMPORT_2aMn1o], ["~/assets/heros/tailwindcss.png?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fwhat-is-tailwind.md", __ASTRO_IMAGE_IMPORT_Z7uKsV], ["~/assets/heros/nginx_secure.png?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Finstall-nginx-secure.md", __ASTRO_IMAGE_IMPORT_ELigK], ["~/assets/heros/astro_dark.png?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fdark-mode-in-astro.md", __ASTRO_IMAGE_IMPORT_LVTlv]]);
+		

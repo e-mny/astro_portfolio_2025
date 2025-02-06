@@ -1,0 +1,28 @@
+[
+  {
+    "href": "/now/",
+    "text": "Now"
+  },
+  {
+    "href": "/about/",
+    "text": "About"
+  },
+  {
+    "href": "/",
+    "text": "Home"
+  },
+  {
+    "href": "/projects/",
+    "text": "Projects"
+  },
+  {
+    "href": "/blog/",
+    "text": "Blog"
+  },
+  {
+    "href": "",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "text": "TO BE REPLACED"
+  }
+]

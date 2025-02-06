@@ -1,0 +1,29 @@
+---
+import { Icon } from "astro-icon";
+
+interface Props {
+  text: string;
+  logo: string;
+  hoverColor: string;
+}
+
+const { text, logo, hoverColor } = Astro.props;
+
+
+---
+
+<li
+  class="flex items-center space-x-4 text-sm font-medium transition-colors duration-400 rounded-lg text-zinc-600 dark:text-gray-200 hover:bg-[var(--hover-color)]"
+  style={`--hover-color: ${hoverColor};`}
+>
+  <span
+    class="flex items-center justify-center w-10 h-10 rounded lg:bg-opacity-60 dark:bg-opacity-40 align-middle"
+  > 
+  {logo ? (
+      <Icon name={logo} class="w-6" />
+    ) : (
+      <img src={`/logos/${text.toLowerCase()}.svg`} alt={text} class="p-1 m-2 items-center align-middle flex" />
+    )}
+  </span>
+  <span>{text}</span>
+</li>

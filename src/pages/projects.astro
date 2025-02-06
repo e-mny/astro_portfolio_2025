@@ -1,0 +1,100 @@
+---
+import AppLayout from "@layouts/AppLayout.astro";
+import Header from "@components/Header.astro";
+import ProjectCard from "@components/ProjectCard.astro";
+
+// Static project data
+type ProjectRole = "author" | "contributor" | "maintainer";
+
+const projects: { name: string; description: string; stars: number; role: ProjectRole; url: string; languages: string[] }[] = [
+  {
+    name: "Project One",
+    description: "Description for project one.",
+    stars: 50,
+    role: "author",
+    url: "https://github.com/yourusername/project-one",
+    languages: ["JavaScript", "HTML", "CSS"]
+  },
+  {
+    name: "Project Two",
+    description: "Description for project two.",
+    stars: 30,
+    role: "contributor",
+    url: "https://github.com/yourusername/project-two",
+    languages: ["Python", "Flask"]
+  },
+  {
+    name: "Project Three",
+    description: "Description for project three.",
+    stars: 80,
+    role: "maintainer",
+    url: "https://github.com/yourusername/project-three",
+    languages: ["C#", "ASP.NET"]
+  },
+  {
+    name: "Project One",
+    description: "Description for project one.",
+    stars: 50,
+    role: "author",
+    url: "https://github.com/yourusername/project-one",
+    languages: ["JavaScript", "HTML", "CSS"]
+  },
+  {
+    name: "Project Two",
+    description: "Description for project two.",
+    stars: 30,
+    role: "contributor",
+    url: "https://github.com/yourusername/project-two",
+    languages: ["Python", "Flask"]
+  },
+  {
+    name: "Project Three",
+    description: "Description for project three.",
+    stars: 80,
+    role: "maintainer",
+    url: "https://github.com/yourusername/project-three",
+    languages: ["C#", "ASP.NET"]
+  }
+];
+
+const description = "Here are some of the projects I have worked on, including ones I have contributed to, authored, or maintained.";
+
+---
+
+<AppLayout title="Projects" 
+           tags={["projects", "portfolio", "github", "enoch mok", "developer", "software engineer"]}
+           description={description}>
+  <Header title="My Projects" />
+  <p
+    class="max-w-prose mb-10 font-normal dark:text-zinc-400 text-zinc-600 leading-relaxed"
+  >
+    {description}
+  </p>
+  <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+    {
+      projects.map((project, index) => (
+        index < 2 ? (
+          <ProjectCard
+            name={project.name}
+            description={project.description}
+            stars={project.stars}
+            role={project.role}
+            url={project.url}
+            languages={project.languages}
+            addClass="lg:col-span-3"
+          />
+        ) : (
+          <ProjectCard
+            name={project.name}
+            description={project.description}
+            stars={project.stars}
+            role={project.role}
+            url={project.url}
+            languages={project.languages}
+            addClass="lg:col-span-2"
+          />
+        )
+      ))
+    }
+  </ul>
+</AppLayout>
