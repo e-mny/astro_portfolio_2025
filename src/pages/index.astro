@@ -8,14 +8,14 @@ import { author } from "@data/socials";
 
 <AppLayout title="Home">
   
-  <header class="sm:grid grid-cols-2 sm:items-center sm:justify-between sm:h-[74vh] overflow-hidden">
-      <div class="rounded aspect-square overflow-hidden drop-shadow-none lg:drop-shadow-[0px_0px_35px_rgba(83,70,250,0.90)] items-center align-middle flex">
+  <header class="md:grid grid-cols-2 md:items-center md:justify-between md:h-[74vh] overflow-hidden">
+      <div class="w-full md:justify-between rounded aspect-square overflow-hidden drop-shadow-none md:drop-shadow-[0px_0px_35px_rgba(83,70,250,0.90)] flex items-center justify-center">
         <Image
         src={authorImage}
         alt="Image of the author"
-        loading="eager"
         width={320}
         height={320}
+        class="-z-50"
         />
       </div>
       <div class="mt-8 max-w-lg 2xl:max-w-xl sm:my-0 sm:order-last">

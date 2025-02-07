@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import NowLayout from "@layouts/NowLayout.astro";
+import ArchiveList from "@components/NowArchiveList.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("now");
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post, slug: post.slug },
+  }));
+}
+
+const { post: archive } = Astro.props;
+const { Content } = await archive.render();
+---
+
+<NowLayout
+  title={archive.data.title}
+  description={archive.data.description}
+  pubDate={archive.data.pubDate}
+  updatedDate={archive.data.updatedDate}
+>
+  <ArchiveList />
+  <Content />
+</NowLayout>

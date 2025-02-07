@@ -7,6 +7,7 @@
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
   font-family: "Roboto", sans-serif;
+  overscroll-behavior-y: none;
 
 }
 body::-webkit-scrollbar {

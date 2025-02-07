@@ -1,10 +1,9 @@
 ---
-import Link from "@components/Link.astro";
 import { author, defaultMeta } from "@data/socials";
-import navigation from "@data/navigation.json";
 import "@fontsource-variable/inter";
 import Footer from "@components/Footer.astro";  
 import "@styles/global.css";
+import NavBar from "@components/NavBar.astro";
 
 interface Props {
   title?: string;
@@ -16,6 +15,7 @@ interface Props {
   pubDate?: Date;
   tags?: string[];
   lastmod?: Date;
+  updatedDate?: Date;
 }
 
 const {
@@ -85,29 +85,22 @@ const date = pubDate || lastmod || new Date();
   tags && tags.map((tag) => ( <meta property="article:tag" content={tag} /> ))
 }
     <meta name="author" content={author} />
-    <meta name="pubdate" content={pubDate || "Fri Oct 20 2023 03:00:00 GMT+0300 (Eastern European Summer Time)"} />
-    <meta name="date" content={date} /> 
-    <meta name="keywords" content={tags} />
+    <meta name="pubdate" content={(pubDate || new Date()).toString()} />
+    <meta name="date" content={date.toString()} /> 
+    <meta name="keywords" content={tags.join(", ")} />
   </head>
   <body
-    class="dark:bg-zinc-900 bg-zinc-100 antialiased selection:bg-blue-300 selection:text-zinc-900 dark:selection:bg-blue-600 dark:selection:text-white 2xl:text-lg flex flex-col"
+    class="dark:bg-zinc-900 bg-zinc-100 antialiased selection:bg-blue-300 selection:text-zinc-900 dark:selection:bg-blue-600 dark:selection:text-white 2xl:text-lg flex flex-col "
     >
-  <div style={{ background: "linear-gradient(45deg, rgba(96, 122, 250, 0) 20.79%, rgba(96, 122, 250, 0.09) 40.92%, rgba(255,255,255, 0) 70.35%)" }} class="fixed top-0 left-0 w-full h-full pointer-events-none -z-1">
+
+    <!-- Page Blur Effect -->
+  <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md z-0"></div>
+
+  <div style={{ background: "linear-gradient(45deg, rgba(96, 122, 250, 0) 20.79%, rgba(96, 122, 250, 0.09) 40.92%, rgba(255,255,255, 0) 70.35%)" }} class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10">
 
   </div>
-    <nav
-      class="sticky top-0 z-10 lg:backdrop-blur-lg bg-zinc-900 bg-opacity-90 lg:bg-opacity-50 py-4 px-6 lg:px-0"
-    >
-      <ul class="flex justify-center space-x-4 text-sm">
-        {
-          navigation.map((item) => (
-            <li>
-              <Link {...item} addClass="font-lg font-medium" />
-            </li>
-          ))
-        }
-      </ul>
-    </nav>
+    <NavBar />
+
     <main class="px-6 lg:px-0 mx-auto max-w-3xl flex flex-col py-6 " id="main-content">
       <slot />
     </main>

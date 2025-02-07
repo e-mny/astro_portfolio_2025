@@ -5,10 +5,10 @@ import { getCollection } from 'astro:content';
 const archives = await getCollection('now');
 
 // Sort by date (newest first)
-archives.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+archives.sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
 ---
 
-<aside class="w-[30vw] hidden lg:block fixed left-0 top-24 px-4">
+<aside class="min-w-fit hidden lg:block fixed left-0 top-[3rem] px-4 ml-4 mr-8 border-r-2 h-full overflow-y-visible">
   <h3 class="text-lg font-semibold mb-2 dark:text-white">📜 Archives</h3>
   <ul class="space-y-2">
     {archives.map((archive) => (

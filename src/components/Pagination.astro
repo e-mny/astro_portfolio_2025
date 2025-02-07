@@ -1,23 +1,28 @@
 ---
 import { getCollection } from "astro:content";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+const { mode } = Astro.props;
+
+
+const posts = await getCollection(mode)
+
+posts.sort((a, b) => new Date(a.data.pubDate).getTime() - new Date(b.data.pubDate).getTime(),
 );
 
 const index = posts.findIndex((post) => {
-  return Astro.request.url.includes(post.slug);
+  return Astro.url.pathname.includes(post.slug);
 });
 
 const nextPost = posts[index + 1];
 const prevPost = posts[index - 1];
+
 ---
 
 <aside class="flex flex-col sm:flex-row mt-10 gap-4 w-full">
   {
     prevPost && (
       <a
-        href={`/blog/${prevPost.slug}/`}
+        href={`/${mode}/${prevPost.slug}/`}
         class="group flex-1 flex flex-col grow text-sm p-4 rounded-lg border border-zinc-300 dark:border-zinc-700 dark:hover:border-blue-400 hover:border-blue-300 transition-all dark:hover:bg-blue-600/20 hover:bg-blue-100"
       >
         <p class="dark:text-zinc-400 text-zinc-600 mb-1 group-hover:dark:text-zinc-300 group-hover:text-zinc-700">
@@ -32,7 +37,7 @@ const prevPost = posts[index - 1];
   {
     nextPost && (
       <a
-        href={`/blog/${nextPost.slug}/`}
+        href={`/${mode}/${nextPost.slug}/`}
         class="group flex-1 flex flex-col text-right grow text-sm p-4 rounded-lg border border-zinc-300 dark:border-zinc-700 dark:hover:border-blue-400 hover:border-blue-300 transition-all dark:hover:bg-blue-600/20 hover:bg-blue-100"
       >
         <p class="dark:text-zinc-400 text-zinc-600 mb-1 group-hover:dark:text-zinc-300 group-hover:text-zinc-700">
