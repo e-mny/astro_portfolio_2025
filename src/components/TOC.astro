@@ -14,13 +14,13 @@ const depthToPadding: { [key: number]: string } = {
 
 <aside class="hidden lg:block fixed top-24 right-4 w-64">
   <div class="bg-zinc-900/80 backdrop-blur-lg p-4 rounded-2xl shadow-lg border border-zinc-800">
-    <h2 class="text-blue-400 font-semibold mb-3 uppercase text-sm tracking-wide">
+    <h2 class="text-blue-400 font-thin mb-3 text-sm tracking-tight">
       On this page
     </h2>
     <ul class="space-y-2 text-sm text-gray-300">
       {headings.map((heading: headingObject) => (
         <li class={`${depthToPadding[heading.depth] ?? "pl-0"} transition-all`}>
-          <a href={`#${heading.slug}`} class="hover:text-blue-300 block py-1 capitalize">
+          <a href={`#${heading.slug}`} class="hover:text-blue-300 block py-1 capitalize font-medium">
             {heading.text}
           </a>
         </li>
