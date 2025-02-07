@@ -1,10 +1,12 @@
 ---
 title: "Single Page Application with React"
+hero: "~/assets/heros/astro_dark.png"
 heroAlt: "Single Page Application"
 description: "Created a single page application using React to provide a dynamic and fast user experience."
 pubDate: 2023-07-20
 updatedDate: 2023-08-15
 tags: ["web development", "React", "SPA"]
+techStack: ["Astro", "Figma", "Markdown"]
 ---
 
 ## Introduction

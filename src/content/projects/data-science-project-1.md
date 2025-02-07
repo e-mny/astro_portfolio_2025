@@ -1,10 +1,12 @@
 ---
 title: "Predictive Analytics with Machine Learning"
+hero: "~/assets/heros/astro_dark.png"
 heroAlt: "Predictive Analytics"
 description: "A project focused on building predictive models using machine learning techniques to forecast future trends."
 pubDate: 2023-01-15
 updatedDate: 2023-02-20
 tags: ["data science", "machine learning", "predictive analytics"]
+techStack: ["Python", "scikit-learn", "TensorFlow", "Pandas"]
 ---
 
 ## Introduction

@@ -1,10 +1,12 @@
 ---
 title: "Natural Language Processing for Text Analysis"
+hero: "~/assets/heros/astro_dark.png"
 heroAlt: "Text Analysis"
 description: "This project involves using NLP techniques to analyze and extract insights from textual data."
 pubDate: 2023-03-10
 updatedDate: 2023-04-05
 tags: ["data science", "NLP", "text analysis"]
+techStack: ["Python", "NLTK", "scikit-learn", "Pandas"]
 ---
 
 ## Introduction

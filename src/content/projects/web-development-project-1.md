@@ -1,10 +1,12 @@
 ---
 title: "Responsive E-commerce Website"
+hero: "~/assets/heros/astro_dark.png"
 heroAlt: "E-commerce Website"
 description: "Developed a responsive e-commerce website with a modern user interface and seamless user experience."
 pubDate: 2023-05-12
 updatedDate: 2023-06-18
 tags: ["web development", "e-commerce", "responsive design"]
+techStack: ["HTML", "CSS", "JavaScript", "Figma"]
 ---
 
 ## Introduction

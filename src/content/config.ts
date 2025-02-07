@@ -1,5 +1,4 @@
 import { defineCollection, z } from 'astro:content';
-import { glob } from 'astro/loaders';
 
 const blogCollection = defineCollection({
   type: 'content',
@@ -26,6 +25,8 @@ const projectsCollection = defineCollection({
       pubDate: z.date(),
       updatedDate: z.date().optional(),
       tags: z.array(z.string()),
+      repoUrl: z.string().optional(),
+      techStack: z.array(z.string())
     }),
 });
 

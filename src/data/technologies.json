@@ -1,6 +1,11 @@
 {
   "Machine Learning & Data Science": [
     {
+      "text": "Python",
+      "logo": "simple-icons:python",
+      "hoverColor": "#4584b6"
+    },
+    {
       "text": "PyTorch",
       "logo": "simple-icons:pytorch",
       "hoverColor": "#EE4C2C"
@@ -55,6 +60,7 @@
       "logo": "",
       "hoverColor": "#F9A03C"
     }
+    
   ],
   "Web Development": [
     {

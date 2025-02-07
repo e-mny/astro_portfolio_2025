@@ -1,10 +1,12 @@
 ---
 title: "Portfolio Website with Astro"
+hero: "~/assets/heros/astro_dark.png"
 heroAlt: "Portfolio Website"
 description: "Built a personal portfolio website using Astro to showcase projects and skills."
 pubDate: 2023-09-05
 updatedDate: 2023-10-01
 tags: ["web development", "Astro", "portfolio"]
+techStack: ["Astro", "Figma", "Markdown"]
 ---
 
 ## Introduction

@@ -1,5 +1,5 @@
 ---
-import BlogLayout from "@layouts/BlogLayout.astro";
+import ProjectLayout from "@layouts/ProjectLayout.astro";
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import type { MarkdownHeading } from 'astro';
@@ -25,23 +25,25 @@ type Props = {
   headings: MarkdownHeading[];
 };
 
-const {post, headings} = Astro.props;
+const { post, headings } = Astro.props;
 const frontmatter = post.data;
 const { Content, remarkPluginFrontmatter } = await post.render();
+
 ---
 
-<BlogLayout
+<ProjectLayout
   title={frontmatter.title}
   pubDate={frontmatter.pubDate}
   image={frontmatter.hero}
   imageAlt={frontmatter.heroAlt}
   description={frontmatter.description}
-  url={post.slug}
+  slugUrl={post.slug}
   updatedDate={frontmatter.updatedDate}
-  tags={frontmatter.tags}
+  techStack={frontmatter.techStack}
   minutesRead={remarkPluginFrontmatter.minutesRead}
   lastModified={remarkPluginFrontmatter.lastModified}
   headings={headings}
+  tags={frontmatter.tags}
 >
   <Content />
-</BlogLayout>
+</ProjectLayout>

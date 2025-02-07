@@ -1,0 +1,35 @@
+---
+import techData from "@data/technologies.json";
+import Icon from "astro-icon";
+
+// Flatten the JSON
+const flattenedTech = Object.values(techData).flat();
+
+const { techStackList } = Astro.props;
+---
+
+<ul class="flex flex-wrap gap-2">
+  {
+    techStackList.map((tech: string) => {
+      const techInfo = flattenedTech.find((item) => item.text === tech);
+      return (
+        <li
+          id={tech}
+          class="px-3 py-2 text-sm font-medium rounded-md flex items-center gap-2 text-light"
+          style={{ backgroundColor: techInfo?.hoverColor || "#333" }}
+        >
+          {techInfo?.logo ? (
+            <span
+              class="text-xl"
+              style={{ backgroundColor: techInfo?.hoverColor || "#333" }}
+            >
+              <Icon name={techInfo.logo} class="w-6" />
+            </span>
+          ) : (
+            <p>{tech}</p>
+          )}
+        </li>
+      );
+    })
+  }
+</ul>
