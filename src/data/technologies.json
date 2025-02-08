@@ -46,11 +46,6 @@
       "hoverColor": "#6e90b2"
     },
     {
-      "text": "Keras",
-      "logo": "simple-icons:keras",
-      "hoverColor": "#D00000"
-    },
-    {
       "text": "OpenCV",
       "logo": "simple-icons:opencv",
       "hoverColor": "#5C3C6F"
@@ -114,7 +109,7 @@
       "hoverColor": "#000"
     },
     {
-      "text": "Golang",
+      "text": "Go",
       "logo": "mdi:language-go",
       "hoverColor": "#00ADD8",
       "inProgress": true

@@ -1,4 +1,6 @@
 ---
+import Tags from './Tags.astro';
+
 interface Props {
   title: string;
   description: string;
@@ -43,16 +45,7 @@ const fullDate = pubDate.toLocaleDateString("en", {
       {description}
     </p>
     <div class="flex flex-wrap gap-2 mt-2 text-zinc-600 text-center">
-      <p class="text-sm dark:text-charcoalGray text-zinc-600 text-center mt-1">
-        Tags:
-      </p>
-      <ul class="flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <li class="dark:bg-zinc-700 bg-zinc-100 text-zinc-600 dark:text-zinc-300 rounded-md px-2 py-1 text-sm capitliz">
-            {tag}
-          </li>
-        ))}
-      </ul>
+      <Tags tags={tags} />
     </div>
   </a>
 </li>

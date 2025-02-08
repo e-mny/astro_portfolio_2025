@@ -7,6 +7,7 @@ import { getRelativeTime } from "src/utils";
 import TOC from "@components/TOC.astro";
 import type { headingObject } from "src/utils";
 import TechStackList from "@components/TechStackList.astro";
+import Tags from "@components/Tags.astro";
 
 interface Props {
   title: string;
@@ -124,14 +125,10 @@ const formattedUpdatedDate = updatedDate ? getRelativeTime(updatedDate) : null;
   <TOC headings={headings} />
   <Pagination mode="projects" />
 
-  <div class="mt-16">
-    <h2 class="text-sm font-bold mb-4 text-charcoalGray">Tags</h2>
-    <div class="text-xs flex flex-wrap gap-2 capitalize">
-      {
-        tags.map((t: string) => (
-          <span class="px-3 py-1 bg-blush text-dark rounded-full">{t}</span>
-        ))
-      }
-    </div>
+  <div class="mt-8 text-sm text-zinc-500">
+    <p class="text-left">Last Updated: <span class="font-semibold text-zinc-700 dark:text-zinc-300">{formattedUpdatedDate}</span></p>
   </div>
+  
+  <Tags tags={tags} />
+  
 </AppLayout>
