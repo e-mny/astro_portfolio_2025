@@ -206,6 +206,11 @@
       "text": "GitHub",
       "logo": "mdi:github",
       "hoverColor": "#333"
+    },
+    {
+      "text": "Telegram",
+      "logo": "mdi:telegram",
+      "hoverColor": "#229ED9"
     }
   ]
 }

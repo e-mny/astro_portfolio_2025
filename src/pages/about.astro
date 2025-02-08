@@ -38,23 +38,25 @@ import Skill from "@components/Skill.astro";
       </p>
     </div>
   </header>
-  <section class="mt-10 sm:mt-28" aria-labelledby="section-title">
+  <section class="w-full mt-10 sm:mt-28" aria-labelledby="section-title">
 
-    <p
-      class="max-w-prose mb-8 font-normal text-sm md:text-lg dark:text-lightGray text-zinc-600 leading-relaxed"
-    >
-      Here are some of the technologies I have worked with:
-    </p>
-    <ul>
-      {Object.entries(technologies).map(([category, techList], index) => {
-        const colors = ["#f7d1cd", "#c5e4c7", "#c3aed6"];
-        const textColor = colors[index % colors.length];
-        return (
-          <li class="flex flex-col mb-8 last:mb-0" id={category}>
+
+  <p
+  class="max-w-prose mb-8 font-normal text-sm md:text-lg dark:text-lightGray text-zinc-600 leading-relaxed"
+  >
+  Here are some of the technologies I have worked with:
+</p>
+
+<ul >
+  {Object.entries(technologies).map(([category, techList], index) => {
+    const colors = ["#f7d1cd", "#c5e4c7", "#c3aed6"];
+      const textColor = colors[index % colors.length];
+      return (
+        <li class="flex flex-col mb-8 last:mb-0" id={category}>
         <h3 class="mb-4 text-lg font-semibold tracking-tight" style={{ color: textColor }}>
           {category}
         </h3>
-        <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3">
+        <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 w-full">
           {techList.map((tech, _) => (
             <Skill {...tech} />
           ))}
