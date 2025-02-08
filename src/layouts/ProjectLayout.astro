@@ -2,14 +2,11 @@
 import AppLayout from "@layouts/AppLayout.astro";
 import Pagination from "@components/Pagination.astro";
 import { Image } from "astro:assets";
-import authorImage from "../assets/me.png";
 import type { ImageMetadata } from "astro";
-import { author, tag } from "@data/socials";
 import { getRelativeTime } from "src/utils";
 import TOC from "@components/TOC.astro";
 import type { headingObject } from "src/utils";
-import Technologies from "@data/technologies.json";
-import TechStackList, { TechList } from "@components/TechStackList.astro";
+import TechStackList from "@components/TechStackList.astro";
 
 interface Props {
   title: string;
@@ -34,7 +31,6 @@ const {
   image,
   imageAlt,
   pubDate,
-  slugUrl,
   repoUrl,
   liveDemo,
   updatedDate,
@@ -49,7 +45,6 @@ const fullPubDate = pubDate.toLocaleDateString("en", {
 });
 
 const formattedUpdatedDate = updatedDate ? getRelativeTime(updatedDate) : null;
-
 ---
 
 <AppLayout title={title} description={description} pubDate={pubDate}>
@@ -78,28 +73,18 @@ const formattedUpdatedDate = updatedDate ? getRelativeTime(updatedDate) : null;
     </div>
   </div>
 
-  <div class="flex flex-col md:flex-row items-center gap-8 mb-8">
-    <!-- Project Image (With Skeleton Placeholder) -->
-    <div
-      class="flex items-center justify-center w-full aspect-video rounded-lg overflow-hidden"
-    >
-      {
-        image ? (
-          <Image
-            src={image}
-            alt={imageAlt}
-            class="rounded-lg shadow-lg w-full h-full object-cover"
-            width={800}
-            height={450}
-          />
-        ) : (
-          <div class="w-full h-full bg-zinc-800 animate-pulse flex items-center justify-center text-zinc-500 text-sm">
-            No Image Available
-          </div>
-        )
-      }
-    </div>
+  <!-- Project Image (With Skeleton Placeholder) -->
+  <div
+    class="flex align-middle items-center justify-center rounded-lg overflow-hidden p-4"
+  >
+    {
+      image ? (
+        <Image src={image} alt={imageAlt} class="rounded-lg shadow-lg" />
+      ) : null
+    }
+  </div>
 
+  <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
     <!-- Tech Stack & Links -->
     <div class="flex flex-col items-start space-y-4 w-full md:w-1/2">
       <div class="flex flex-wrap gap-3">
@@ -136,7 +121,7 @@ const formattedUpdatedDate = updatedDate ? getRelativeTime(updatedDate) : null;
   >
     <slot />
   </article>
-<TOC headings={headings} />
+  <TOC headings={headings} />
   <Pagination mode="projects" />
 
   <div class="mt-16">
@@ -144,9 +129,7 @@ const formattedUpdatedDate = updatedDate ? getRelativeTime(updatedDate) : null;
     <div class="text-xs flex flex-wrap gap-2 capitalize">
       {
         tags.map((t: string) => (
-          <span class="px-3 py-1 bg-blush text-dark rounded-full">
-            {t}
-          </span>
+          <span class="px-3 py-1 bg-blush text-dark rounded-full">{t}</span>
         ))
       }
     </div>

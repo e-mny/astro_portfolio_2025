@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 const { mode } = Astro.props;
 
 
-const posts = await getCollection(mode)
+const posts: Array<{ slug: string; data: { pubDate: string; title: string } }> = await getCollection(mode)
 
 posts.sort((a, b) => new Date(a.data.pubDate).getTime() - new Date(b.data.pubDate).getTime(),
 );
