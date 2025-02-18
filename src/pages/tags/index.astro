@@ -1,0 +1,103 @@
+---
+import AppLayout from "@layouts/AppLayout.astro";
+import Header from "@components/Header.astro";
+import { getCollection } from "astro:content";
+import ProjectListCard from "@components/ProjectListCard.astro";
+
+const projects = await getCollection("projects", (post) => !post.data.draft);
+
+const allTags = [...new Set(projects.flatMap((project) => project.data.tags))];
+---
+
+<AppLayout
+  title="Projects"
+  tags={["projects", "portfolio", "github", "developer"]}
+>
+  <Header title="Tags" />
+
+  <div class="py-6">
+    <!-- Tags Filter -->
+    <div class="flex flex-wrap gap-2 mb-6">
+      <!-- <button class="tag-button active" data-tag="all">All</button> -->
+      {
+        allTags.map((tag) => (
+          <button class="tag-button text-white dark:hover:border-blue-300  dark:active:border-blue-600 border-b-2 rounded-md dark:bg-zinc-700 bg-zinc-100 px-2 py-1 animate-link" data-tag={tag} onclick="this.classList.toggle('dark:bg-blue-600')">
+            {tag}
+          </button>
+        ))
+      }
+    </div>
+
+    <!-- Projects List -->
+    <ul id="projectList" class="space-y-6 px-4">
+      {
+        projects.map((project) => (
+          <ProjectListCard
+            title={project.data.title}
+            description={project.data.description}
+            slugUrl={`/projects/${project.slug}/`}
+            repoUrl={project.data.repoUrl}
+            tags={project.data.tags}
+            image={project.data.hero}
+            imageAlt={project.data.heroAlt}
+          />
+        ))
+      }
+    </ul>
+  </div>
+
+  <!-- JavaScript for Filtering -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(".tag-button");
+      const projects = document.querySelectorAll(".project-item");
+      const activeTags = new Set<string>();
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const selectedTag = button.getAttribute("data-tag");
+
+          if (button.classList.contains("active")) {
+            button.classList.remove("active");
+            if (selectedTag) {
+              activeTags.delete(selectedTag);
+            }
+          } else {
+            button.classList.add("active");
+            if (selectedTag) {
+              activeTags.add(selectedTag);
+            }
+          }
+
+          if (activeTags.size === 0) {
+            projects.forEach((project) => {
+              (project as HTMLElement).style.opacity = "1";
+              (project as HTMLElement).style.display = "flex";
+            });
+          } else {
+            projects.forEach((project) => {
+              const projectTags =
+                project.getAttribute("data-tags")?.split(",") || [];
+
+              if (
+                [...activeTags].every((tag) => projectTags.includes(tag))
+              ) {
+                (project as HTMLElement).style.opacity = "1";
+                (project as HTMLElement).style.display = "flex";
+              } else {
+                (project as HTMLElement).style.opacity = "0";
+                setTimeout(
+                  () => ((project as HTMLElement).style.display = "none"),
+                  0
+                );
+              }
+            });
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- Styles -->
+
+</AppLayout>

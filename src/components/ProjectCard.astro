@@ -3,7 +3,7 @@ import { Icon } from "astro-icon";
 import { Image } from "astro:assets";
 
 interface Props {
-  name: string;
+  title: string;
   slugUrl?: string | undefined;
   repoUrl?: string | undefined;
   image: string;
@@ -13,98 +13,76 @@ interface Props {
   addClass?: string | null;
 }
 
-const { name, slugUrl, repoUrl, image, imageAlt, description, tags, addClass } =
+const { title, slugUrl, repoUrl, image, imageAlt, description, tags, addClass } =
   Astro.props;
 ---
 
 <li
-  class=`dark:text-light text-zinc-500 gap-1 p-6 border dark:border-zinc-700/60 rounded-lg flex bg-opacity-40 dark:bg-opacity-40 bg-zinc-50 dark:bg-[#1e1e1e] ${addClass} lg:col-span-3 group transition-all duration-300 relative hover:shadow-[0_0_30px_rgba(255,255,255,0.8)]`
+  class={`dark:text-light text-zinc-500 gap-1 p-6 border dark:border-zinc-700/60 rounded-lg flex bg-opacity-40 dark:bg-opacity-40 bg-zinc-50 dark:bg-[#1e1e1e] ${addClass} lg:col-span-3 group transition-all duration-300 relative hover:shadow-[0_0_30px_rgba(255,255,255,0.8)]`}
 >
-  <div class="grid auto-rows-min">
-    {
-      image ? (
-        <a href={slugUrl}>
-          <div class="flex justify-center items-center h-full">
-            <Image src={image} alt={imageAlt} height={200} width={400} />
-          </div>
-        </a>
-      ) : null
-    }
-    <div class="h-full">
+  <div class="grid auto-rows-min h-full">
+    {image && (
+      <a href={slugUrl}>
+        <div class="flex justify-center items-center h-full">
+          <Image src={image} alt={imageAlt} height={200} width={400} />
+        </div>
+      </a>
+    )}
+
+    {/* Ensure title, description, and tags are aligned */}
+    <div class="h-full flex flex-col">
       <div class="flex justify-between">
         <div class="flex flex-col sm:flex-row sm:items-baseline pt-4">
           <a href={slugUrl}>
-            <h2
-              class="text-lg font-medium dark:text-white text-zinc-700 [word-break:break-word]"
-            >
-              {name}
+            <h2 class="text-lg font-medium dark:text-white text-zinc-700 [word-break:break-word] line-clamp-2">
+              {title}
             </h2>
           </a>
         </div>
         <div class="flex gap-2">
-          {
-            repoUrl && (
-              <a
-                href={repoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Open ${name} repository in a new tab`}
-              >
-                <Icon
-                  name="mdi:github"
-                  class="w-6 fill-current dark:hover:text-zinc-300 hover:text-zinc-600 hover:scale-110 transition-all"
-                />
-              </a>
-            )
-          }
+          {repoUrl && (
+            <a href={repoUrl} target="_blank" rel="noopener noreferrer" aria-label={`Open ${title} repository in a new tab`}>
+              <Icon
+                title="mdi:github"
+                class="w-6 fill-current dark:hover:text-zinc-300 hover:text-zinc-600 hover:scale-110 transition-all"
+              />
+            </a>
+          )}
         </div>
       </div>
-      {
-        description && (
-          <p class="text-sm leading-relaxed dark:text-charcoalGray text-zinc-600 mt-2 ">{description}</p>
-        )
-      }
-      <ul class="flex flex-wrap gap-2 my-2">
-        {
-          tags.map((item) => {
-            let bgColor = "";
-            switch (item) {
-              case "JavaScript":
-                bgColor = "bg-yellow-500 dark:bg-yellow-600";
-                break;
-              case "Python":
-                bgColor = "bg-blue-500 dark:bg-blue-600";
-                break;
-              case "Go":
-                bgColor = "bg-green-500 dark:bg-green-600";
-                break;
-              case "HTML":
-                bgColor = "bg-orange-500 dark:bg-orange-600";
-                break;
-              case "CSS":
-                bgColor = "bg-indigo-500 dark:bg-indigo-600";
-                break;
-              case "TypeScript":
-                bgColor = "bg-blue-600 dark:bg-blue-700";
-                break;
-              case "SQL":
-                bgColor = "bg-yellow-400 dark:bg-yellow-500";
-                break;
-              default:
-                bgColor = "bg-gray-200 dark:bg-gray-600"; // Default color for unknown languages
-                break;
-            }
 
-            return (
-              <li
-                class={`rounded-md px-2 py-1 text-sm dark:bg-zinc-700 bg-zinc-100 text-zinc-600 dark:text-zinc-300 capitalize`}
-              >
-                {item}
-              </li>
-            );
-          })
-        }
+      {/* Description with min-height */}
+      {description && (
+        <p class="text-sm leading-relaxed dark:text-charcoalGray text-zinc-600 pt-2 line-clamp-3">
+          {description}
+        </p>
+      )}
+
+      {/* Tags List */}
+      <ul class="flex flex-wrap gap-2 py-2">
+        {tags.map((item) => (
+          <li class="rounded-md h-min px-2 py-1 text-sm dark:bg-zinc-700 bg-zinc-100 text-zinc-600 dark:text-zinc-300">
+            {item}
+          </li>
+        ))}
       </ul>
     </div>
   </div>
 </li>
+
+<style>
+  .project-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .project-card-header {
+    flex-grow: 1;
+  }
+
+  .project-card-footer {
+    margin-top: auto;
+  }
+</style>

@@ -5,8 +5,8 @@ import ProjectCard from "@components/ProjectCard.astro";
 import { getCollection } from "astro:content";
 
 
-const projects = await getCollection("projects")
-const description = "Here are some of the projects I have worked on, including ones I have contributed to, authored, or maintained.Pardon my yapping... 🗣️";
+const projects = await getCollection("projects", (post) => !post.data.draft)
+const description = "Here are some of the projects I have worked on... (pardon my yapping... 🗣️)";
 ---
 
 <AppLayout title="Projects" 
@@ -14,7 +14,7 @@ const description = "Here are some of the projects I have worked on, including o
            description={description}>
   <Header title="My Projects" />
   <p
-    class="max-w-prose ml-6 mt-4 mb-10 font-normal dark:text-zinc-400 text-zinc-600 leading-relaxed"
+    class="mx-6 mt-4 mb-10 font-normal dark:text-zinc-400 text-zinc-600 leading-relaxed"
   >
     {description}
   </p>
@@ -23,7 +23,7 @@ const description = "Here are some of the projects I have worked on, including o
       projects.map((project) => (
 
           <ProjectCard
-            name={project.data.title}
+            title={project.data.title}
             description={project.data.description}
             slugUrl={`/projects/${project.slug}/`}
             repoUrl={project.data.repoUrl}
