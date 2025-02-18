@@ -12,7 +12,6 @@
   scroll-padding-top: 4rem;
   font-family: "Roboto", sans-serif;
   overscroll-behavior-y: none;
-
 }
 body::-webkit-scrollbar {
   width: 0.4rem;
@@ -52,13 +51,23 @@ body::-webkit-scrollbar-thumb:hover {
   transform: translateZ(0) scaleX(0);
   transform-origin: left center;
   transition: all 0.15s ease-in-out;
-  background-image: linear-gradient(
-    to right,
-    #a8d0e6,
-    #a8d0e6
-  );
+  background-image: linear-gradient(to right, #a8d0e6, #a8d0e6);
 }
 
 .animated-link.show:after {
   transform: translateZ(0) scale(1);
+}
+
+.project-item {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

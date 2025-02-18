@@ -11,17 +11,20 @@ const allTags = [...new Set(projects.flatMap((project) => project.data.tags))];
 
 <AppLayout
   title="Projects"
-  tags={["projects", "portfolio", "github", "developer"]}
+  tags={["projects", "portfolio", "github", "developer", "tags"]}
 >
   <Header title="Tags" />
 
   <div class="py-6">
     <!-- Tags Filter -->
     <div class="flex flex-wrap gap-2 mb-6">
-      <!-- <button class="tag-button active" data-tag="all">All</button> -->
       {
         allTags.map((tag) => (
-          <button class="tag-button text-white dark:hover:border-blue-300  dark:active:border-blue-600 border-b-2 rounded-md dark:bg-zinc-700 bg-zinc-100 px-2 py-1 animate-link" data-tag={tag} onclick="this.classList.toggle('dark:bg-blue-600')">
+          <button
+            class="tag-button text-white dark:hover:border-green-500 border-b-2 rounded-md dark:bg-zinc-700 bg-zinc-100 px-2 py-1"
+            data-tag={tag}
+            onclick="this.classList.toggle('dark:bg-green-800'); this.classList.toggle('dark:bg-zinc-700')"
+          >
             {tag}
           </button>
         ))
@@ -76,20 +79,18 @@ const allTags = [...new Set(projects.flatMap((project) => project.data.tags))];
             });
           } else {
             projects.forEach((project) => {
+              (project as HTMLElement).style.opacity = "0";
+              (project as HTMLElement).style.display = "none";
+
               const projectTags =
                 project.getAttribute("data-tags")?.split(",") || [];
 
-              if (
-                [...activeTags].every((tag) => projectTags.includes(tag))
-              ) {
+              if ([...activeTags].every((tag) => projectTags.includes(tag))) {
                 (project as HTMLElement).style.opacity = "1";
                 (project as HTMLElement).style.display = "flex";
               } else {
                 (project as HTMLElement).style.opacity = "0";
-                setTimeout(
-                  () => ((project as HTMLElement).style.display = "none"),
-                  0
-                );
+                (project as HTMLElement).style.display = "none";
               }
             });
           }
@@ -99,5 +100,4 @@ const allTags = [...new Set(projects.flatMap((project) => project.data.tags))];
   </script>
 
   <!-- Styles -->
-
 </AppLayout>
