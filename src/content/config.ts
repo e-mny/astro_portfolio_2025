@@ -26,7 +26,8 @@ const projectsCollection = defineCollection({
       updatedDate: z.date().optional(),
       tags: z.array(z.string()),
       repoUrl: z.string().optional(),
-      techStack: z.array(z.string())
+      techStack: z.array(z.string()),
+      draft: z.boolean().optional().default(false)
     }),
 });
 

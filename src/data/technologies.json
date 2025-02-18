@@ -49,11 +49,6 @@
       "text": "OpenCV",
       "logo": "simple-icons:opencv",
       "hoverColor": "#5C3C6F"
-    },
-    {
-      "text": "D3.js",
-      "logo": "",
-      "hoverColor": "#F9A03C"
     }
     
   ],

@@ -16,13 +16,7 @@
     "text": "Projects"
   },
   {
-    "href": "/blog/",
-    "text": "Blog"
-  },
-  {
-    "href": "",
-    "target": "_blank",
-    "rel": "noopener noreferrer",
-    "text": "TO BE REPLACED"
+    "href": "/tags/",
+    "text": "tags"
   }
 ]
