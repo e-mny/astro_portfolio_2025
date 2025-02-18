@@ -6,18 +6,18 @@ import Link from "@components/Link.astro";
 <nav
   class="sticky top-0 z-10 lg:backdrop-blur-lg bg-zinc-900 bg-opacity-90 lg:bg-opacity-50 py-4 px-6 lg:px-0 w-full"
 >
-  <ul class="hidden sm:flex justify-center space-x-4 text-sm">
+  <ul class="hidden md:flex justify-center space-x-4 text-sm">
     {
       navigation.map((item) => (
         <li>
-          <Link {...item} addClass="font-lg font-medium" />
+          <Link {...item} addClass="font-lg font-medium capitalize" />
         </li>
       ))
     }
   </ul>
 
   <!-- Mobile Menu Button -->
-  <button id="menu-toggle" class="lg:hidden text-white focus:outline-none">
+  <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
     <svg
       id="menu-icon"
       class="w-6 h-6"
@@ -50,7 +50,7 @@ import Link from "@components/Link.astro";
 <!-- Mobile Menu -->
 <div
   id="mobile-menu"
-  class="hidden lg:hidden absolute top-[3rem] left-0 w-full bg-zinc-900 transition-all duration-300 z-50"
+  class="hidden md:hidden absolute top-[3rem] left-0 w-full bg-zinc-900 transition-all duration-300 z-50"
 >
   <ul class="flex flex-col items-center space-y-4 py-6">
     {
@@ -78,6 +78,7 @@ import Link from "@components/Link.astro";
         // Toggle menu
         mobileMenu.classList.toggle("hidden");
         overlay.classList.toggle("hidden");
+        overlay.classList.toggle("overflow-hidden")
 
         // Toggle icons
         if (isOpen) {

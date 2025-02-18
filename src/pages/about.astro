@@ -56,11 +56,13 @@ import Skill from "@components/Skill.astro";
         <h3 class="mb-4 text-lg font-semibold tracking-tight" style={{ color: textColor }}>
           {category}
         </h3>
-        <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 w-full">
+          <div class="w-full">
+        <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3">
           {techList.map((tech, _) => (
             <Skill {...tech} />
           ))}
         </ul>
+      </div>
           </li>
         );
       })}

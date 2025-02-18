@@ -8,20 +8,20 @@ const flattenedTech = Object.values(techData).flat();
 const { techStackList } = Astro.props;
 ---
 
-<ul class="flex flex-wrap gap-2 items-center justify-center">
+<ul class="flex flex-wrap gap-2">
   {
     techStackList.map((tech: string) => {
       const techInfo = flattenedTech.find((item) => item.text === tech);
       return (
         <li
           id={tech}
-          class="px-3 py-2 text-sm font-medium rounded-md flex items-center gap-2 text-light"
+          class="px-3 py-2 text-sm font-medium flex items-center gap-2 text-light"
          
         >
           {techInfo?.logo ? (
             <span
-              class="text-xl"
-              style={{ backgroundColor: techInfo?.hoverColor || "#333" }}
+              class="text-xl hover:bg-white rounded-md hover:scale-110 transition-all"
+              style={{ color: techInfo?.hoverColor || "#333" }}
             >
               <Icon name={techInfo.logo} class="w-6" />
             </span>
