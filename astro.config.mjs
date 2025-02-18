@@ -12,9 +12,14 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   build: {
-    format: 'file'
+    format: "file",
   },
-  integrations: [tailwind(), compressor(), mdx(), react()],
+  integrations: [
+    tailwind({ applyBaseStyles: false }),
+    compressor(),
+    mdx(),
+    react(),
+  ],
   image: {
     service: sharpImageService(),
   },
@@ -25,9 +30,6 @@ export default defineConfig({
     },
   },
   markdown: {
-    remarkPlugins: [
-      remarkReadingTime,
-      [remarkToc, { heading: "contents"} ],
-    ],
+    remarkPlugins: [remarkReadingTime, [remarkToc, { heading: "contents" }]],
   },
 });
