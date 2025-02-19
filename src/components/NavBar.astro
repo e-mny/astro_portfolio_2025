@@ -50,7 +50,7 @@ import Link from "@components/Link.astro";
 <!-- Mobile Menu -->
 <div
   id="mobile-menu"
-  class="hidden md:hidden absolute top-[3rem] left-0 w-full bg-zinc-900 transition-all duration-300 z-50"
+  class="hidden md:hidden absolute top-[3rem] left-0 w-full transition-all duration-300 z-50"
 >
   <ul class="flex flex-col items-center space-y-4 py-6">
     {
@@ -78,7 +78,7 @@ import Link from "@components/Link.astro";
         // Toggle menu
         mobileMenu.classList.toggle("hidden");
         overlay.classList.toggle("hidden");
-        overlay.classList.toggle("overflow-hidden")
+        overlay.classList.toggle("overflow-y-hidden")
 
         // Toggle icons
         if (isOpen) {
