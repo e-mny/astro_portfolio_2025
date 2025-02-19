@@ -8,64 +8,81 @@ import Skill from "@components/Skill.astro";
 ---
 
 <AppLayout title="About">
-  <header class="sm:flex sm:items-center sm:justify-between max-w-3xl">
-    <div class="w-full rounded aspect-square overflow-hidden drop-shadow-none md:drop-shadow-[0px_0px_35px_rgba(83,70,250,0.90)] flex items-center justify-center">
-        <Image
+  <header
+    class="sm:flex sm:items-center sm:justify-between max-w-3xl gap-2 snap-start"
+  >
+    <div
+      class="w-full rounded aspect-square overflow-hidden drop-shadow-none md:drop-shadow-[0px_0px_35px_rgba(83,70,250,0.90)] flex items-center justify-center"
+    >
+      <Image
         src={authorImage}
         alt="Image of the author"
         loading="eager"
         width={320}
         height={320}
-        />
-      </div>
-    <div class="mt-8 max-w-lg 2xl:max-w-xl sm:my-0 sm:order-first">
+      />
+    </div>
+    <div class="mt-8 max-w-lg 2xl:max-w-xl sm:my-0 sm:order-first w-full">
       <h1
-        class="mb-2 text-3xl font-bold tracking-tight dark:text-white text-zinc-900 sm:text-4xl"
+        class="mb-2 text-3xl font-bold tracking-tight dark:text-white text-zinc-900"
       >
-        About
+        About Me
       </h1>
-      <p class="mb-4 dark:text-lightGray text-zinc-700 flex items-center">
-        Full Stack Developer from Singapore 
-        <Image src={singaporeFlag} alt="Singapore Flag" height={25} width={25} class="mx-2 inline-block" />
-      </p>
       <p
-        class="max-w-prose font-normal text-sm md:text-lg dark:text-charcoalGray text-zinc-600 sm:max-w-sm md:max-w-xl leading-relaxed"
+        class="mb-1 dark:text-charcoalGray text-zinc-700 flex items-center text-md"
       >
-        I am a self-taught developer who loves to build things for the web. I
-        have been coding for 3 years now and I am always looking to learn new
-        things. I am currently working on a few projects, but I am always open
-        to new opportunities.
+        Some Data Scientist from Singapore
+        <Image
+          src={singaporeFlag}
+          alt="Singapore Flag"
+          height={25}
+          width={25}
+          class="mx-2 inline-block"
+        />
       </p>
+      <div
+        class="max-w-prose font-normal text-sm dark:text-lightGray text-zinc-600 sm:max-w-sm md:max-w-xl justify-evenly leading-loose w-7/8"
+      >
+        Hellooooo, I'm Enoch (pronounced E-knock).
+        <p>
+          To me, tech is all about making sense of data and building practical
+          tools that take the man out of manual work.
+        </p>
+        <p>Learning isn't a phase; it's a lifestyle.</p>
+      </div>
     </div>
   </header>
-  <section class="w-full mt-10 sm:mt-28" aria-labelledby="section-title">
+  <section class="w-full md:pt-4 pt-16" aria-labelledby="section-title">
+    <p
+      class="max-w-prose mb-8 font-normal text-lg dark:text-lightGray text-zinc-600 leading-tight"
+    >
+      Here are some of the technologies I have worked with:
+    </p>
 
-
-  <p
-  class="max-w-prose mb-8 font-normal text-sm md:text-lg dark:text-lightGray text-zinc-600 leading-relaxed"
-  >
-  Here are some of the technologies I have worked with:
-</p>
-
-<ul >
-  {Object.entries(technologies).map(([category, techList], index) => {
-    const colors = ["#f7d1cd", "#c5e4c7", "#c3aed6"];
-      const textColor = colors[index % colors.length];
-      return (
-        <li class="flex flex-col mb-8 last:mb-0" id={category}>
-        <h3 class="mb-4 text-lg font-semibold tracking-tight" style={{ color: textColor }}>
-          {category}
-        </h3>
-          <div class="w-full">
-        <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3">
-          {techList.map((tech, _) => (
-            <Skill {...tech} />
-          ))}
-        </ul>
-      </div>
-          </li>
-        );
-      })}
+    <ul>
+      {
+        Object.entries(technologies).map(([category, techList], index) => {
+          const colors = ["#f7d1cd", "#c5e4c7", "#c3aed6"];
+          const textColor = colors[index % colors.length];
+          return (
+            <li class="flex flex-col mb-8 last:mb-0" id={category}>
+              <h3
+                class="mb-4 text-lg font-semibold tracking-tight"
+                style={{ color: textColor }}
+              >
+                {category}
+              </h3>
+              <div class="w-full">
+                <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3">
+                  {techList.map((tech, _) => (
+                    <Skill {...tech} />
+                  ))}
+                </ul>
+              </div>
+            </li>
+          );
+        })
+      }
     </ul>
   </section>
 </AppLayout>
