@@ -22,6 +22,7 @@ import { github, linkedin } from "@/data/socials";
         loading="eager"
         width={320}
         height={320}
+        class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto"
       />
     </div>
     <div class="mt-8 max-w-lg 2xl:max-w-xl sm:my-0 sm:order-first w-full">
@@ -30,7 +31,7 @@ import { github, linkedin } from "@/data/socials";
       >
         About Me
       </h1>
-      <p
+      <!-- <p
         class="mb-1 dark:text-charcoalGray text-zinc-700 flex items-center text-md"
       >
         Some Data Scientist from Singapore
@@ -41,16 +42,21 @@ import { github, linkedin } from "@/data/socials";
           width={25}
           class="mx-2 inline-block"
         />
-      </p>
+      </p> -->
       <div
         class="max-w-prose font-normal text-sm dark:text-lightGray text-zinc-600 sm:max-w-sm md:max-w-xl justify-evenly leading-loose w-7/8"
       >
-        Hellooooo, I'm Enoch (pronounced E-knock).
+        Hellooooo! I'm Enoch (pronounced E-knock).
         <p>
           To me, tech is all about making sense of data and building practical
           tools that take the man out of manual work.
         </p>
-        <p>Learning isn't a phase; it's a lifestyle.</p>
+        <p>&#8203;</p>
+        <blockquote
+          class="text-base text-left italic font-light text-zinc-600 dark:text-beige"
+        >
+          “Learning isn't a phase; it's a lifestyle.”
+        </blockquote>
         <div class="flex space-x-4 mt-2">
           <a href={linkedin} target="_blank" rel="noopener noreferrer">
             <Icon name="mdi:linkedin" width="25" height="25" />
@@ -69,11 +75,11 @@ import { github, linkedin } from "@/data/socials";
       </div>
     </div>
   </header>
-  <section class="w-full md:pt-4 pt-16" aria-labelledby="section-title">
+  <section class="w-full md:pt-16 pt-16" aria-labelledby="section-title">
     <p
       class="max-w-prose mb-8 font-normal text-lg dark:text-lightGray text-zinc-600 leading-tight"
     >
-      Here are some of the technologies I have worked with:
+      My Tech Arsenal:
     </p>
 
     <ul>
