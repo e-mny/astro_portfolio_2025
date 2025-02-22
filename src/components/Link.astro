@@ -14,9 +14,11 @@ const hrefPath =
 if (!href) {
   isActive = false;
 } else if (hrefPath === "/") {
-  isActive = currentPath === "/";
+  isActive = currentPath === Astro.url.pathname;
 } else {
-  isActive = currentPath.includes(hrefPath);
+  isActive = Astro.url.pathname.includes(
+    typeof href === "string" ? href : href.href
+  );
 }
 ---
 
