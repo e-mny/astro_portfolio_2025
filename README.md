@@ -6,8 +6,8 @@
 - [ ] SEO Optimization for Better Search Visibility
 - [ ] Fast Load Times with Optimized Assets
 - [ ] Basic Accessibility Compliance (ARIA, Contrast, Keyboard Navigation)
-- [ ] Deployment to a Live Server (Netlify, Vercel, or Custom Hosting)
 - [ ] In 'about' page, have a section for Interactive Timeline or Work History Section before Tech Stack
+- [x] Deployment to a Live Server (Netlify, Vercel, or Custom Hosting)
 - [x] Home Page
 - [x] About Section
 - [x] Projects Overview
