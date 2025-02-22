@@ -40,26 +40,38 @@ const { title, slugUrl, repoUrl, image, imageAlt, description, tags } =
           {title}
         </h2>
       </a>
-      {repoUrl && (
-        <a href={repoUrl} target="_blank" rel="noopener noreferrer" aria-label={`Open ${title} repository in a new tab`} class="text-white">
-          <Icon
-            title="mdi:github"
-            class="w-6 fill-current dark:hover:text-zinc-300 hover:text-zinc-600 hover:scale-110 transition-all"
-          />
-        </a>
-      )}
+      {
+        repoUrl && (
+          <a
+            href={repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${title} repository in a new tab`}
+            class="text-white"
+          >
+            <Icon
+              title="mdi:github"
+              class="w-6 fill-current dark:hover:text-zinc-300 hover:text-zinc-600 hover:scale-110 transition-all"
+            />
+          </a>
+        )
+      }
     </div>
 
-    <p class="text-sm text-zinc-600 dark:text-charcoalGray leading-relaxed pt-1">
+    <p
+      class="text-sm text-zinc-600 dark:text-charcoalGray leading-relaxed pt-1"
+    >
       {description}
     </p>
 
     <div class="flex flex-wrap gap-2 mt-2">
-      {tags.map((tag) => (
-        <span class="rounded-md px-2 py-1 text-xs dark:bg-zinc-700 bg-zinc-100 text-zinc-600 dark:text-zinc-300 ">
-          {tag}
-        </span>
-      ))}
+      {
+        tags.map((tag) => (
+          <span class="rounded-md h-min px-2 py-1 text-sm dark:bg-zinc-700 bg-zinc-100 text-zinc-600 dark:text-zinc-300">
+            {tag}
+          </span>
+        ))
+      }
     </div>
   </div>
 </li>

@@ -12,7 +12,7 @@
 - [ ] Fast Load Times with Optimized Assets
 - [ ] Basic Accessibility Compliance (ARIA, Contrast, Keyboard Navigation)
 - [ ] Deployment to a Live Server (Netlify, Vercel, or Custom Hosting)
-- [ ] Simple Animations for Smooth UI Experience
+- [x] Simple Animations for Smooth UI Experience
 - [x] Custom 404 Error Page
 - [x] Interactive Elements (Hover Effects, Clickable Cards)
 
