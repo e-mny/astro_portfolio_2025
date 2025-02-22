@@ -7,19 +7,24 @@ interface Props extends HTMLAttributes<"a"> {
 }
 const { text, addClass, href, ...props } = Astro.props;
 let isActive: boolean;
-const currentPath = Astro.url.pathname.replace(/\/$/, ""); // Remove trailing slash
-const hrefPath =
-  typeof href === "string" ? href.replace(/\/$/, "") : href?.href ?? "";
 
 if (!href) {
   isActive = false;
-} else if (hrefPath === "/") {
-  isActive = currentPath === Astro.url.pathname;
 } else {
-  isActive = Astro.url.pathname.includes(
-    typeof href === "string" ? href : href.href
-  );
+  // Ensure Astro.url is available
+  const currentPath = Astro.url?.pathname?.replace(/\/$/, "") || ""; // Remove trailing slash for consistency
+  const hrefPath =
+    typeof href === "string" ? href.replace(/\/$/, "") : href.href;
+
+  if (hrefPath === "/") {
+    isActive = currentPath === "/";
+  } else {
+    isActive = currentPath.includes(hrefPath);
+  }
 }
+
+console.log("Current Path:", Astro.url?.pathname);
+console.log("Href:", href);
 ---
 
 <a
