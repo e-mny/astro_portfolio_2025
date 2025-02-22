@@ -8,25 +8,28 @@ interface Props extends HTMLAttributes<"a"> {
 const { text, addClass, href, ...props } = Astro.props;
 let isActive: boolean;
 
-const currentPath = Astro.url?.pathname || ""; // Directly use the current path
-const hrefPath = typeof href === "string" ? href : href?.href || ""; // Directly use the href path
+// Get the current path from Astro URL
+const currentPath = Astro.url?.pathname || "";
 
-// For homepage link, check if current path is exactly "/"
-if (hrefPath === "/" && (currentPath === "/" || currentPath === "")) {
-  isActive = true; // Homepage matches both "/" and empty path
+// Ensure `href` is a string and not a complex object
+const hrefPath = typeof href === "string" ? href : href?.href || "";
+
+// Create URL objects for comparison
+const currentUrl = new URL(currentPath, "https://dummy.com"); // Dummy base URL to avoid issues
+const hrefUrl = new URL(hrefPath, "https://dummy.com");
+
+// Strip out the trailing slashes for consistent comparison
+const normalizedCurrentPath = currentUrl.pathname.replace(/\/$/, "");
+const normalizedHrefPath = hrefUrl.pathname.replace(/\/$/, "");
+
+// Compare paths (with normalization)
+if (
+  normalizedHrefPath === "/" &&
+  (normalizedCurrentPath === "/" || normalizedCurrentPath === "")
+) {
+  isActive = true; // Treat home page as active if it's either "/" or ""
 } else {
-  // For other links, check if the current path exactly matches the href path
-  isActive = currentPath === hrefPath;
-}
-
-// Debugging: Check values in production
-console.log("Current Path:", currentPath);
-console.log("Href Path:", hrefPath);
-
-if (hrefPath === "/" && (currentPath === "/" || currentPath === "")) {
-  isActive = true; // Treat both "/" and "" as the homepage
-} else {
-  isActive = currentPath === hrefPath; // General path comparison
+  isActive = normalizedCurrentPath === normalizedHrefPath; // Compare normalized paths
 }
 ---
 
@@ -49,4 +52,6 @@ if (hrefPath === "/" && (currentPath === "/" || currentPath === "")) {
   aria-label={`Go to ${text} page`}
 >
   {text}
+  {normalizedCurrentPath}
+  {normalizedHrefPath}
 </a>
