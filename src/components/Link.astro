@@ -17,10 +17,6 @@ const hrefPath =
     ? href.replace(/\/$/, "") // Normalize href
     : href?.href?.replace(/\/$/, "");
 
-// Debugging: Check values in production
-console.log("Current Path:", currentPath);
-console.log("Href Path:", hrefPath);
-
 if (hrefPath === "/" && (currentPath === "/" || currentPath === "")) {
   isActive = true; // Treat both "/" and "" as the homepage
 } else {
