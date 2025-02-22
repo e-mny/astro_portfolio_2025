@@ -11,26 +11,39 @@ import { github, linkedin } from "@/data/socials";
 
 <AppLayout title="About">
   <header
-    class="sm:flex sm:items-center sm:justify-between max-w-3xl gap-2 snap-start"
+    class="sm:flex sm:items-center sm:justify-between max-w-3xl gap-2 snap-start md:pb-12 pb-8"
   >
     <div
-      class="w-full rounded aspect-square overflow-hidden drop-shadow-none md:drop-shadow-[0px_0px_35px_rgba(83,70,250,0.90)] flex items-center justify-center"
+      class="w-5/6 h-full rounded overflow-hidden drop-shadow-none md:drop-shadow-[0px_0px_35px_rgba(83,70,250,0.90)] flex items-center justify-center"
     >
       <Image
         src={authorImage}
         alt="Image of the author"
-        loading="eager"
+        loading="lazy"
         width={320}
         height={320}
         class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto"
       />
     </div>
     <div class="mt-8 max-w-lg 2xl:max-w-xl sm:my-0 sm:order-first w-full">
-      <h1
-        class="mb-2 text-3xl font-bold tracking-tight dark:text-white text-zinc-900"
-      >
-        About Me
+      <h1 class="mb-2 text-4xl font-mono dark:text-blue-400 text-zinc-900">
+        Hello! I'm Enoch <span class="text-sm">/enɒk/</span>
       </h1>
+      <div class="flex space-x-4 mt-2 dark:text-lightGray">
+        <a href={linkedin} target="_blank" rel="noopener noreferrer">
+          <Icon name="mdi:linkedin" width="25" height="25" />
+        </a>
+        <a href={github} target="_blank" rel="noopener noreferrer">
+          <Icon name="mdi:github" width="25" height="25" />
+        </a>
+        <a
+          href="/resume/EnochMok_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon name="mdi:file-document-outline" width="25" height="25" />
+        </a>
+      </div>
       <!-- <p
         class="mb-1 dark:text-charcoalGray text-zinc-700 flex items-center text-md"
       >
@@ -44,42 +57,27 @@ import { github, linkedin } from "@/data/socials";
         />
       </p> -->
       <div
-        class="max-w-prose font-normal text-sm dark:text-lightGray text-zinc-600 sm:max-w-sm md:max-w-xl justify-evenly leading-loose w-7/8"
+        class="max-w-prose font-normal text-base md:text-lg dark:text-lightGray text-zinc-600 sm:max-w-sm md:max-w-xl text-justify leading-loose w-full pt-4"
       >
-        Hellooooo! I'm Enoch (pronounced E-knock).
-        <p>
-          To me, tech is all about making sense of data and building practical
-          tools that take the man out of manual work.
-        </p>
+        <p>&#8203;</p>
+        <p>Datasets have stories. I tell them.</p>
+        <p>Processes have boring parts. I automate them.</p>
+        <p>Ideas have potential. I applicationize them.</p>
         <p>&#8203;</p>
         <blockquote
-          class="text-base text-left italic font-light text-zinc-600 dark:text-beige"
+          class="pt-12 text-base text-left italic font-light text-zinc-600 dark:text-beige"
         >
           “Learning isn't a phase; it's a lifestyle.”
         </blockquote>
-        <div class="flex space-x-4 mt-2">
-          <a href={linkedin} target="_blank" rel="noopener noreferrer">
-            <Icon name="mdi:linkedin" width="25" height="25" />
-          </a>
-          <a href={github} target="_blank" rel="noopener noreferrer">
-            <Icon name="mdi:github" width="25" height="25" />
-          </a>
-          <a
-            href="/resume/EnochMok_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon name="mdi:file-document-outline" width="25" height="25" />
-          </a>
-        </div>
       </div>
     </div>
   </header>
-  <section class="w-full md:pt-16 pt-16" aria-labelledby="section-title">
+  <hr class="my-hr" />
+  <section class="w-full md:pt-12 pt-8" aria-labelledby="section-title">
     <p
-      class="max-w-prose mb-8 font-normal text-lg dark:text-lightGray text-zinc-600 leading-tight"
+      class="max-w-prose mb-8 text-xl font-bold dark:text-lightGray text-zinc-600 leading-tight underline underline-offset-2"
     >
-      My Tech Arsenal:
+      My Arsenal
     </p>
 
     <ul>
