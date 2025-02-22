@@ -5,7 +5,7 @@
 - [x] Home Page
 - [x] About Section
 - [x] Projects Overview
-- [ ] Contact Form with downloadable Resume/CV
+- [x] Contact Form with downloadable Resume/CV
 - [x] Responsive Design for Mobile and Desktop
 - [ ] Project Detail Pages with Case Studies
 - [ ] SEO Optimization for Better Search Visibility

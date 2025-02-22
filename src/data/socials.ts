@@ -1,7 +1,7 @@
 export const tag = "@enochmok";
 export const author = "Enoch Mok";
 export const email = "enochmokny@gmail.com"
-export const github = "https://github.com/e-mny"
+export const github = "https://www.github.com/e-mny"
 export const linkedin = "https://www.linkedin.com/in/enochmok/"
 
 

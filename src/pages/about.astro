@@ -5,6 +5,8 @@ import authorImage from "../assets/me.png";
 import singaporeFlag from "../assets/flag-for-singapore.svg";
 import technologies from "@data/technologies.json";
 import Skill from "@components/Skill.astro";
+import Icon from "astro-icon";
+import { github, linkedin } from "@/data/socials";
 ---
 
 <AppLayout title="About">
@@ -49,6 +51,21 @@ import Skill from "@components/Skill.astro";
           tools that take the man out of manual work.
         </p>
         <p>Learning isn't a phase; it's a lifestyle.</p>
+        <div class="flex space-x-4 mt-2">
+          <a href={linkedin} target="_blank" rel="noopener noreferrer">
+            <Icon name="mdi:linkedin" width="25" height="25" />
+          </a>
+          <a href={github} target="_blank" rel="noopener noreferrer">
+            <Icon name="mdi:github" width="25" height="25" />
+          </a>
+          <a
+            href="/resume/EnochMok_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon name="mdi:file-document-outline" width="25" height="25" />
+          </a>
+        </div>
       </div>
     </div>
   </header>

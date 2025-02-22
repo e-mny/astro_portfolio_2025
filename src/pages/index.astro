@@ -1,41 +1,59 @@
 ---
 import AppLayout from "@layouts/AppLayout.astro";
 import { Image } from "astro:assets";
-import authorImage from "../assets/me.png";
+import authorImage from "../assets/photos/hero_img.jpg";
 import singaporeFlag from "../assets/flag-for-singapore.svg";
 import { author } from "@data/socials";
 ---
 
 <AppLayout title="Home">
-  
-  <header class="md:grid grid-cols-2 md:items-center md:justify-between md:h-[74vh] overflow-hidden">
-      <div class="w-full md:justify-between rounded aspect-square overflow-hidden drop-shadow-none md:drop-shadow-[0px_0px_35px_rgba(83,70,250,0.90)] flex items-center justify-center">
-        <Image
+  <header
+    class="md:grid grid-cols-2 md:items-center md:justify-between md:h-[74vh] overflow-hidden"
+  >
+    <div
+      class="w-4/5 ml-4 md:justify-between rounded-lg overflow-hidden flex items-center justify-center drop-shadow-none hover:md:drop-shadow-[0px_0px_5px_rgba(255,255,255,0.90)] transition-all ease-in-out duration-300"
+    >
+      <Image
         src={authorImage}
-        alt="Image of the author"
-        width={320}
-        height={320}
-        class="-z-50"
-        />
-      </div>
-      <div class="mt-8 max-w-lg 2xl:max-w-xl sm:my-0 sm:order-last">
-        <h1
+        alt="Image of Me"
+        width={3000}
+        height={3000}
+        class="transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
+      />
+    </div>
+    <div class="mt-8 max-w-lg 2xl:max-w-xl sm:my-0 sm:order-last">
+      <h1
         class="mb-2 text-3xl font-bold tracking-tight dark:text-white text-zinc-900 sm:text-4xl"
-        >
+      >
         {author}
       </h1>
-      <p class="mb-4 dark:text-lightGray text-zinc-700 flex items-center">
-        Full Stack Developer from Singapore 
-        <Image src={singaporeFlag} alt="Singapore Flag" height={25} width={25} class="mx-2 inline-block" />
+      <p class="mb-4 dark:text-lightGray text-zinc-700">
+        Developer, Sportsman, Musician from Singapore
+        <Image
+          src={singaporeFlag}
+          alt="Singapore Flag"
+          height={25}
+          width={25}
+          class="inline"
+        />
       </p>
-      <p
-      class="max-w-prose font-normal text-sm md:text-lg dark:text-charcoalGray text-zinc-600 sm:max-w-sm md:max-w-xl leading-relaxed"
+      <div
+        class="max-w-prose font-normal text-sm md:text-base dark:text-charcoalGray text-zinc-600 sm:max-w-sm md:max-w-xl leading-relaxed"
       >
-      I am a self-taught developer who loves to build things for the web. I
-      have been coding for 3 years now and I am always looking to learn new
-      things. I am currently working on a few projects, but I am always open
-      to new opportunities.
-    </p>
-</div>
-</header>
+        <p>
+          Like an athlete, I train relentlessly, honing my skills in data
+          analysis and development to stay at the top of my game.
+        </p>
+        <p>&#8203;</p>
+        <p>
+          Like a composer, I craft innovative solutions, writing code that
+          harmonizes with user needs and business objectives.
+        </p>
+        <!-- <p>
+          Each data point a note. Each line of code a chord. I compose elegant
+          systems, where each data element contributes to a greater harmony.
+        </p> -->
+      </div>
+    </div>
+  </header>
 </AppLayout>
