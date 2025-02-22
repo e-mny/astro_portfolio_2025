@@ -75,3 +75,7 @@ body::-webkit-scrollbar-thumb:hover {
 a:hover{
   color: #51a2ff;
 }
+
+img{
+  border-radius: 0.5rem;
+}
