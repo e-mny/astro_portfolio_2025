@@ -7,6 +7,7 @@ import technologies from "@data/technologies.json";
 import Skill from "@components/Skill.astro";
 import Icon from "astro-icon";
 import { github, linkedin } from "@/data/socials";
+import ImageGallery from "@/components/ImageGallery.astro";
 ---
 
 <AppLayout title="About">
@@ -14,48 +15,33 @@ import { github, linkedin } from "@/data/socials";
     class="sm:flex sm:items-center sm:justify-between max-w-3xl gap-2 snap-start md:pb-12 pb-8"
   >
     <div
-      class="w-5/6 h-full rounded overflow-hidden drop-shadow-none md:drop-shadow-[0px_0px_35px_rgba(83,70,250,0.90)] flex items-center justify-center"
+      class="w-5/6 h-full rounded overflow-hidden flex items-center justify-center"
     >
-      <Image
-        src={authorImage}
-        alt="Image of the author"
-        loading="lazy"
-        width={320}
-        height={320}
-        class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto"
-      />
+      <ImageGallery />
     </div>
     <div class="mt-8 max-w-lg 2xl:max-w-xl sm:my-0 sm:order-first w-full">
-      <h1 class="mb-2 text-4xl tracking-wide dark:text-blue-400 text-zinc-900">
-        Hello! I'm Enoch <span class="text-sm">/enɒk/</span>
-      </h1>
-      <div class="flex space-x-4 mt-2 dark:text-lightGray">
-        <a href={linkedin} target="_blank" rel="noopener noreferrer">
-          <Icon name="mdi:linkedin" width="25" height="25" />
-        </a>
-        <a href={github} target="_blank" rel="noopener noreferrer">
-          <Icon name="mdi:github" width="25" height="25" />
-        </a>
-        <a
-          href="/resume/EnochMok_Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div class="relative top-0">
+        <h1
+          class="mb-2 text-4xl tracking-wide dark:text-blue-400 text-zinc-900"
         >
-          <Icon name="mdi:file-document-outline" width="25" height="25" />
-        </a>
+          Hello! I'm Enoch <span class="text-sm">/enɒk/</span>
+        </h1>
+        <div class="flex space-x-4 mt-2 dark:text-lightGray">
+          <a href={linkedin} target="_blank" rel="noopener noreferrer">
+            <Icon name="mdi:linkedin" width="25" height="25" />
+          </a>
+          <a href={github} target="_blank" rel="noopener noreferrer">
+            <Icon name="mdi:github" width="25" height="25" />
+          </a>
+          <a
+            href="/resume/EnochMok_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon name="mdi:file-document-outline" width="25" height="25" />
+          </a>
+        </div>
       </div>
-      <!-- <p
-        class="mb-1 dark:text-charcoalGray text-zinc-700 flex items-center text-md"
-      >
-        Some Data Scientist from Singapore
-        <Image
-          src={singaporeFlag}
-          alt="Singapore Flag"
-          height={25}
-          width={25}
-          class="mx-2 inline-block"
-        />
-      </p> -->
       <div
         class="max-w-prose font-normal text-base md:text-lg dark:text-lightGray text-zinc-600 sm:max-w-sm md:max-w-xl text-justify leading-loose w-full pt-4"
       >
