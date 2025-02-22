@@ -19,7 +19,10 @@ const currentUrl = new URL(currentPath, "https://dummy.com"); // Dummy base URL 
 const hrefUrl = new URL(hrefPath, "https://dummy.com");
 
 // Strip out the trailing slashes for consistent comparison
-const normalizedCurrentPath = currentUrl.pathname.replace(/\/$/, "");
+const normalizedCurrentPath = currentUrl.pathname
+  .replace(/\/$/, "")
+  .toLowerCase()
+  .replace(".html", "");
 const normalizedHrefPath = hrefUrl.pathname.replace(/\/$/, "");
 
 // Compare paths (with normalization)
