@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-const imageFiles = import.meta.glob("/src/assets/photos/*");
+const imageFiles = import.meta.glob("/src/assets/photos/*", { eager: true });
 const imagePaths = Object.keys(imageFiles)
   .filter((file_path) => file_path != "/src/assets/photos/hero_img.jpg")
   .sort(() => Math.random() - 0.5);
