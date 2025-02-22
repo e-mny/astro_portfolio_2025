@@ -7,8 +7,7 @@
 - [ ] Fast Load Times with Optimized Assets
 - [ ] Basic Accessibility Compliance (ARIA, Contrast, Keyboard Navigation)
 - [ ] Deployment to a Live Server (Netlify, Vercel, or Custom Hosting)
-- [ ] Replace Hero Image with Sims Avatar
-- [ ] In 'about' page, make tech stack appear in next scroll
+- [ ] In 'about' page, have a section for Interactive Timeline or Work History Section
 - [x] Home Page
 - [x] About Section
 - [x] Projects Overview
@@ -20,16 +19,16 @@
 
 ### Optional Features
 
+- [ ] Image Gallery with Lightbox Effect
+- [ ] Footer to always stay at the bottom for all pages.
+- [ ] Search Feature
 - [ ] Toggling Dark Mode
+- [ ] In 'about' page, snap sections to scrolls
+- [ ] Contact Form with reCAPTCHA to Prevent Spam
+- [ ] Testimonials or Reviews Section
+- [ ] Replace Hero Image with Sims Avatar
 - [ ] Custom Domain Name Setup
 - [ ] Google Analytics for Traffic Monitoring
-- [ ] Testimonials or Reviews Section
-- [ ] Search Feature
-- [ ] Image Gallery with Lightbox Effect
-- [ ] Motion-based Effects (Parallax Scrolling)
-- [ ] Contact Form with reCAPTCHA to Prevent Spam
-- [ ] Interactive Timeline or Work History Section
-- [ ] Footer to always stay at the bottom for all pages.
 
 ### Blog-related Stuff (if it is implemented)
 
