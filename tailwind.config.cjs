@@ -30,8 +30,7 @@ module.exports = {
         
         charcoalGray: '#9f9fa9',
         primary: "#1e80ff", // Blue
-        dark: "#121212", // Dark Gray
-        light: "#f6f6f6", // Light Gray
+        darkGray: "#121212", // Dark Gray
         sky: "#a8d0e6", // Pastel Sky Blue
         lavender: "#c3aed6", // Pastel Lavender
         blush: "#f7d1cd", // Soft Blush Pink
