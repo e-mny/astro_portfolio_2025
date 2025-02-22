@@ -5,38 +5,34 @@ interface Props extends HTMLAttributes<"a"> {
   text: string;
   addClass?: string;
 }
+
 const { text, addClass, href, ...props } = Astro.props;
 let isActive: boolean;
 
-if (!href) {
-  isActive = false;
+// Normalize paths (remove trailing slashes for consistency)
+const currentPath = (Astro.url?.pathname || "").replace(/\/$/, "");
+const hrefPath =
+  typeof href === "string"
+    ? href.replace(/\/$/, "")
+    : href?.href?.replace(/\/$/, "");
+
+if (hrefPath === "/" && (currentPath === "/" || currentPath === "")) {
+  isActive = true;
 } else {
-  // Ensure Astro.url is available
-  const currentPath = Astro.url?.pathname?.replace(/\/$/, "") || ""; // Remove trailing slash for consistency
-  const hrefPath =
-    typeof href === "string" ? href.replace(/\/$/, "") : href.href;
-
-  if (hrefPath === "/") {
-    isActive = currentPath === "/";
-  } else {
-    isActive = currentPath.includes(hrefPath);
-  }
+  isActive = currentPath === hrefPath;
 }
-
-console.log("Current Path:", Astro.url?.pathname);
-console.log("Href:", href);
 ---
 
 <a
   class:list={[
-    "px-4 py-2 text-base md:text-sm font-medium capitalize",
+    "px-4 py-2 text-base md:text-sm font-medium capitalize transition-all duration-300",
     {
       "dark:text-bluePrimary text-blue-600 border-b-2 border-blue-400 dark:border-blue-600":
-        isActive,
+        isActive, // Active link styles
     },
     {
       "dark:text-white text-white dark:hover:text-skyblue animated-link":
-        !isActive,
+        !isActive, // Default styles
     },
     addClass,
   ]}
