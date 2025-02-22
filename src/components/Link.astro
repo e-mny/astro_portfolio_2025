@@ -8,11 +8,16 @@ interface Props extends HTMLAttributes<"a"> {
 const { text, addClass, href, ...props } = Astro.props;
 let isActive: boolean;
 
-const currentPath = (Astro.url?.pathname || "").replace(/\/$/, ""); // Normalize current path
-const hrefPath =
-  typeof href === "string"
-    ? href.replace(/\/$/, "") // Normalize href
-    : href?.href?.replace(/\/$/, "");
+const currentPath = Astro.url?.pathname || ""; // Directly use the current path
+const hrefPath = typeof href === "string" ? href : href?.href || ""; // Directly use the href path
+
+// For homepage link, check if current path is exactly "/"
+if (hrefPath === "/" && (currentPath === "/" || currentPath === "")) {
+  isActive = true; // Homepage matches both "/" and empty path
+} else {
+  // For other links, check if the current path exactly matches the href path
+  isActive = currentPath === hrefPath;
+}
 
 // Debugging: Check values in production
 console.log("Current Path:", currentPath);
