@@ -71,3 +71,7 @@ body::-webkit-scrollbar-thumb:hover {
     opacity: 1;
   }
 }
+
+a:hover{
+  color: #51a2ff;
+}
