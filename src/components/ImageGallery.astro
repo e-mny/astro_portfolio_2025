@@ -10,7 +10,7 @@ const imagePaths = Object.keys(imageFiles)
 <div class="embla">
   <div class="embla__container">
     {
-      imagePaths.map((path) => {
+      imagePaths.map((path: string) => {
         const fileName = (path.split("/").pop() || "")
           .replace(".png", "")
           .replace(".jpg", "")
@@ -18,7 +18,7 @@ const imagePaths = Object.keys(imageFiles)
         return (
           <Image
             id="carousel-image"
-            src={path}
+            src={(imageFiles[path] as { default: string }).default}
             alt={fileName}
             width={3000}
             height={3000}
