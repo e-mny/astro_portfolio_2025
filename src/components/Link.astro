@@ -7,22 +7,30 @@ interface Props extends HTMLAttributes<"a"> {
 }
 const { text, addClass, href, ...props } = Astro.props;
 let isActive: boolean;
+const currentPath = Astro.url.pathname.replace(/\/$/, ""); // Remove trailing slash
+const hrefPath =
+  typeof href === "string" ? href.replace(/\/$/, "") : href?.href ?? "";
+
 if (!href) {
   isActive = false;
-} else if (href === "/") {
-  isActive = href === Astro.url.pathname;
+} else if (hrefPath === "/") {
+  isActive = currentPath === "/";
 } else {
-  isActive = Astro.url.pathname.includes(
-    typeof href === "string" ? href : href.href,
-  );
+  isActive = currentPath.includes(hrefPath);
 }
 ---
 
 <a
   class:list={[
     "px-4 py-2 text-base md:text-sm font-medium capitalize",
-    { "dark:text-bluePrimary text-blue-600 border-b-2 border-blue-400 dark:border-blue-600": isActive },
-    { "dark:text-white text-white dark:hover:text-skyblue animated-link": !isActive },
+    {
+      "dark:text-bluePrimary text-blue-600 border-b-2 border-blue-400 dark:border-blue-600":
+        isActive,
+    },
+    {
+      "dark:text-white text-white dark:hover:text-skyblue animated-link":
+        !isActive,
+    },
     addClass,
   ]}
   aria-current={isActive ? "page" : undefined}
