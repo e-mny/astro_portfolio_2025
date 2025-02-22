@@ -5,21 +5,23 @@ interface Props extends HTMLAttributes<"a"> {
   text: string;
   addClass?: string;
 }
-
 const { text, addClass, href, ...props } = Astro.props;
 let isActive: boolean;
 
-// Normalize paths (remove trailing slashes for consistency)
-const currentPath = (Astro.url?.pathname || "").replace(/\/$/, "");
+const currentPath = (Astro.url?.pathname || "").replace(/\/$/, ""); // Normalize current path
 const hrefPath =
   typeof href === "string"
-    ? href.replace(/\/$/, "")
+    ? href.replace(/\/$/, "") // Normalize href
     : href?.href?.replace(/\/$/, "");
 
+// Debugging: Check values in production
+console.log("Current Path:", currentPath);
+console.log("Href Path:", hrefPath);
+
 if (hrefPath === "/" && (currentPath === "/" || currentPath === "")) {
-  isActive = true;
+  isActive = true; // Treat both "/" and "" as the homepage
 } else {
-  isActive = currentPath === hrefPath;
+  isActive = currentPath === hrefPath; // General path comparison
 }
 ---
 
