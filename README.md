@@ -7,7 +7,8 @@
 - [ ] Fast Load Times with Optimized Assets
 - [ ] Basic Accessibility Compliance (ARIA, Contrast, Keyboard Navigation)
 - [ ] Deployment to a Live Server (Netlify, Vercel, or Custom Hosting)
-- [ ] Replace Hero Image with Sims Image
+- [ ] Replace Hero Image with Sims Avatar
+- [ ] In 'about' page, make tech stack appear in next scroll
 - [x] Home Page
 - [x] About Section
 - [x] Projects Overview
