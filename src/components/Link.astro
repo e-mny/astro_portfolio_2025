@@ -8,31 +8,23 @@ interface Props extends HTMLAttributes<"a"> {
 const { text, addClass, href, ...props } = Astro.props;
 let isActive: boolean;
 
-// Get the current path from Astro URL
-const currentPath = Astro.url?.pathname || "";
-
-// Ensure `href` is a string and not a complex object
-const hrefPath = typeof href === "string" ? href : href?.href || "";
-
-// Create URL objects for comparison
-const currentUrl = new URL(currentPath, "https://dummy.com"); // Dummy base URL to avoid issues
-const hrefUrl = new URL(hrefPath, "https://dummy.com");
-
-// Strip out the trailing slashes for consistent comparison
-const normalizedCurrentPath = currentUrl.pathname
+const currentPath = (Astro.url?.pathname || "")
   .replace(/\/$/, "")
   .toLowerCase()
-  .replace(".html", "");
-const normalizedHrefPath = hrefUrl.pathname.replace(/\/$/, "");
+  .replace(".html", ""); // Normalize current path
+const hrefPath =
+  typeof href === "string"
+    ? href.replace(/\/$/, "") // Normalize href
+    : href?.href?.replace(/\/$/, "");
 
-// Compare paths (with normalization)
-if (
-  normalizedHrefPath === "/" &&
-  (normalizedCurrentPath === "/" || normalizedCurrentPath === "")
-) {
-  isActive = true; // Treat home page as active if it's either "/" or ""
+// Debugging: Check values in production
+console.log("Current Path:", currentPath);
+console.log("Href Path:", hrefPath);
+
+if (hrefPath === "/" && (currentPath === "/" || currentPath === "")) {
+  isActive = true; // Treat both "/" and "" as the homepage
 } else {
-  isActive = normalizedCurrentPath === normalizedHrefPath; // Compare normalized paths
+  isActive = currentPath === hrefPath; // General path comparison
 }
 ---
 
@@ -55,6 +47,4 @@ if (
   aria-label={`Go to ${text} page`}
 >
   {text}
-  {normalizedCurrentPath}
-  {normalizedHrefPath}
 </a>
