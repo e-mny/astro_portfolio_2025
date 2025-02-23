@@ -7,6 +7,7 @@ pubDate: 2025-02-23
 updatedDate: 2025-02-23
 tags: ["web development", "Astro", "react", "next.js", "svelte"]
 techStack: ["Astro", "JavaScript", "Markdown", "CSS", "HTML"]
+repoUrl: "https://github.com/e-mny/astro_portfolio_2025"
 draft: false
 ---
 
