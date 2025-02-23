@@ -36,28 +36,30 @@ const { title, slugUrl, repoUrl, image, imageAlt, description, tags } =
 
     <!-- Right Content -->
     <div class="flex flex-col justify-between flex-grow p-4">
-      <div class="flex justify-between items-center">
-        <a href={slugUrl} class="block">
+      <div class="flex justify-between items-center align-middle">
+        <a href={slugUrl}>
           <h2 class="text-lg font-medium text-zinc-700 dark:text-white">
             {title}
           </h2>
         </a>
-        {
-          repoUrl && (
-            <a
-              href={repoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Open ${title} repository in a new tab`}
-              class="text-white"
-            >
-              <Icon
-                name="mdi:github"
-                class="w-6 fill-current dark:hover:text-zinc-300 hover:text-zinc-600 hover:scale-110 transition-all"
-              />
-            </a>
-          )
-        }
+        <div class="flex gap-2">
+          {
+            repoUrl && (
+              <a
+                href={repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${title} repository in a new tab`}
+                class="text-white"
+              >
+                <Icon
+                  name="mdi:github"
+                  class="w-7 h-auto fill-current dark:hover:text-zinc-300 hover:text-zinc-600 hover:scale-110 transition-all"
+                />
+              </a>
+            )
+          }
+        </div>
       </div>
 
       <p

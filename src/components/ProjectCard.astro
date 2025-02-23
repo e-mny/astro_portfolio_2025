@@ -41,17 +41,15 @@ const {
     }
 
     {/* Ensure title, description, and tags are aligned */}
-    <div class="h-full flex flex-col">
-      <div class="flex justify-between">
-        <div class="flex flex-col sm:flex-row sm:items-baseline pt-4">
-          <a href={slugUrl}>
-            <h2
-              class="text-lg font-medium dark:text-white text-zinc-700 [word-break:break-word] line-clamp-2"
-            >
-              {title}
-            </h2>
-          </a>
-        </div>
+    <div class="h-full flex flex-col justify-between">
+      <div class="flex flex-row pt-4 justify-between">
+        <a href={slugUrl}>
+          <h2
+            class="text-lg font-medium dark:text-white text-zinc-700 [word-break:break-word] line-clamp-2"
+          >
+            {title}
+          </h2>
+        </a>
         <div class="flex gap-2">
           {
             repoUrl && (
@@ -60,10 +58,11 @@ const {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Open ${title} repository in a new tab`}
+                class="text-white"
               >
                 <Icon
                   name="mdi:github"
-                  class="w-6 fill-current dark:hover:text-zinc-300 hover:text-zinc-600 hover:scale-110 transition-all"
+                  class="w-7 h-auto fill-current dark:hover:text-zinc-300 hover:text-zinc-600 hover:scale-110 transition-all"
                 />
               </a>
             )
@@ -84,21 +83,21 @@ const {
       <Tags tags={tags} />
     </div>
   </div>
+
+  <style>
+    .project-card-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .project-card-header {
+      flex-grow: 1;
+    }
+
+    .project-card-footer {
+      margin-top: auto;
+    }
+  </style>
 </li>
-
-<style>
-  .project-card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-
-  .project-card-header {
-    flex-grow: 1;
-  }
-
-  .project-card-footer {
-    margin-top: auto;
-  }
-</style>
