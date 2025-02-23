@@ -86,4 +86,4 @@ Feel free to try out **FitLah Bot** on Telegram and get real-time updates on Act
 
 Feedback is always appreciated! 😄
 
-[Click here to start using FitLah Bot](https://t.me/@fitlahsg_bot)
+[Click here to start using FitLah Bot](https://t.me/fitlahsg_bot)
