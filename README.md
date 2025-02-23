@@ -7,7 +7,6 @@
 - [ ] Fast Load Times with Optimized Assets
 - [ ] Basic Accessibility Compliance (ARIA, Contrast, Keyboard Navigation)
 - [ ] In 'about' page, have a section for Interactive Timeline or Work History Section before Tech Stack
-- [ ] Cannot see previous archives on mobile
 - [x] Deployment to a Live Server (Netlify, Vercel, or Custom Hosting)
 - [x] Home Page
 - [x] About Section
@@ -32,6 +31,11 @@
 - [ ] Custom Domain Name Setup
 - [ ] Google Analytics for Traffic Monitoring
 - [x] Image Gallery
+
+### Bugs
+
+- [ ] Cannot see previous archives on mobile
+- [ ] When looking at projects, the activeLink for 'projects' is not active
 
 ### Blog-related Stuff (if it is implemented)
 
