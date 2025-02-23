@@ -83,6 +83,23 @@ img{
   margin-right: auto;
 }
 
+img[alt='Photo at Georgia Tech']{
+  height: 30rem;
+  width: auto;
+}
+
+a>img[alt='Web Framework Comparison Video'] {
+  height: 10rem;
+  width: auto;
+  padding: 0px;
+}
+
+@media (min-width: 768px) {
+  a>img[alt='Web Framework Comparison Video'] {
+    height: 20rem;
+  }
+}
+
 .my-hr {
   border: none;
   height: 3px; 

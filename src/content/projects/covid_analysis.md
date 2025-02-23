@@ -7,6 +7,7 @@ pubDate: 2022-12-05
 updatedDate: 2025-02-23
 tags: ["medical", "data visualization", "data science", "python", "sql"]
 techStack: ["Python", "Pandas", "Matplotlib", "SQLite"]
+repoUrl: "https://github.com/e-mny/covid_analysis"
 draft: false
 ---
 

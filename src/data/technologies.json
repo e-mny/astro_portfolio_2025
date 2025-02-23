@@ -142,6 +142,11 @@
       "text": "Jupyter",
       "logo": "simple-icons:jupyter",
       "hoverColor": "#F37626"
+    },
+    {
+      "text": "Markdown",
+      "logo": "simple-icons:markdown",
+      "hoverColor": "#fff"
     }
   ],  
   "Operating Systems": [
