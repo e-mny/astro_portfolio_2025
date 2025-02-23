@@ -49,6 +49,16 @@ const formattedUpdatedDate = updatedDate ? getRelativeTime(updatedDate) : null;
 ---
 
 <AppLayout title={title} description={description} pubDate={pubDate}>
+  <!-- Project Image (With Skeleton Placeholder) -->
+  <div
+    class="flex align-middle items-center justify-center rounded-lg overflow-hidden p-4"
+  >
+    {
+      image ? (
+        <Image src={image} alt={imageAlt} class="rounded-lg shadow-lg" />
+      ) : null
+    }
+  </div>
   <header class="flex flex-col mb-8">
     <h1
       class={`text-2xl sm:text-4xl pb-6 font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400`}
@@ -72,17 +82,6 @@ const formattedUpdatedDate = updatedDate ? getRelativeTime(updatedDate) : null;
     <div>
       <TechStackList techStackList={techStack} />
     </div>
-  </div>
-
-  <!-- Project Image (With Skeleton Placeholder) -->
-  <div
-    class="flex align-middle items-center justify-center rounded-lg overflow-hidden p-4"
-  >
-    {
-      image ? (
-        <Image src={image} alt={imageAlt} class="rounded-lg shadow-lg" />
-      ) : null
-    }
   </div>
 
   <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
@@ -126,9 +125,11 @@ const formattedUpdatedDate = updatedDate ? getRelativeTime(updatedDate) : null;
   <Pagination mode="projects" />
 
   <div class="mt-8 text-sm text-zinc-500">
-    <p class="text-left">Last Updated: <span class="font-semibold text-zinc-700 dark:text-zinc-300">{formattedUpdatedDate}</span></p>
+    <p class="text-left">
+      Last Updated: <span class="font-semibold text-zinc-700 dark:text-zinc-300"
+        >{formattedUpdatedDate}</span>
+    </p>
   </div>
-  
+
   <Tags tags={tags} />
-  
 </AppLayout>
