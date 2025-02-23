@@ -11,7 +11,7 @@ repoUrl: "https://github.com/e-mny/astro_portfolio_2025"
 draft: false
 ---
 
-## Chapter 1: The Beginning – Why This Project?
+## Chapter 1: The Beginning
 
 Do I really need to explain myself? Hahah as a developer... it seems like it's mandatory to have a personal website!
 
@@ -24,7 +24,7 @@ Regardless, I found it quite fun, playing around with different frameworks peopl
 
 ---
 
-## Chapter 2: The Research – Finding The Best Tools
+## Chapter 2: Finding The Best Tools
 
 I spent hours finding the best tool for the job. Many suggested React because there is just so much support and it's so popular especially with Next.js. I gave that a shot. It was great. Plenty of functions especially with the states and how it makes the website just so responsive.
 
@@ -55,7 +55,7 @@ Enough talk about how much time I spent on searching, but perhaps I'll share mor
 
 ---
 
-## Chapter 3: The Building – Be Inspired!
+## Chapter 3: The Inspiration
 
 Enough yapping, let's start writing code! I needed inspiration, so I went to Pinterest, Awwwards, Dribble to find the designs that spoke to me.
 
@@ -85,7 +85,7 @@ Not my proudest moment, but I ended up going back to Astro because I get to use 
 
 ---
 
-## Chapter 4: The Breakthrough – Done Is Better Than Perfect
+## Chapter 4: Done Is Better Than Perfect
 
 By writing down everything that I wanted to implement on my website, I feel alot more relieved. I categorized the features I want for my MVP, and those that are for aesthetics and are optional.
 
@@ -93,7 +93,7 @@ Once all my MVP features are implemented, I will include it in my LinkedIn and r
 
 ---
 
-## Chapter 5: The Result – The Final Outcome
+## Chapter 5: The Result
 
 Well, when you see this, the website is ready to be SERVED (excluding the optional features).
 

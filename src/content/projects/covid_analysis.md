@@ -11,7 +11,7 @@ repoUrl: "https://github.com/e-mny/covid_analysis"
 draft: false
 ---
 
-## Chapter 1: The Beginning – Why This Project?
+## Chapter 1: Why This Project?
 
 ![Photo at Georgia Tech](../../assets/projects/GATech.jpg)
 
@@ -32,7 +32,7 @@ I didn't have any personal projects back then, so it was time to get started.
 
 ---
 
-## Chapter 2: The Research – Diving Into the Unknown
+## Chapter 2: The Research
 
 It was about 3 years since the pandemic, and I figured datasets on this hot topic were probably available. And I was right. In fact, plenty were available on just [Kaggle](https://www.kaggle.com/search?q=covid+19+in%3Adatasets) alone.
 
@@ -41,7 +41,7 @@ It was about 3 years since the pandemic, and I figured datasets on this hot topi
 
 ---
 
-## Chapter 3: The Building – The Art of Creation
+## Chapter 3: My Tech Weapons
 
 To apply what I learnt during my classes, I decided to implement a simple SQL server with the datasets I found. This tested my SQL querying and forced me to rely on purely SQL instead of using Python libraries.
 
@@ -53,7 +53,7 @@ Note: I used Python in-built library `sqlite3` to access the SQLite server.
 
 ---
 
-## Chapter 4: The Analysis - The Coding Element
+## Chapter 4: The Analysis
 
 After studying the dataset and understanding what kind of data was available, I came up with 3 hypotheses to test.
 
@@ -91,7 +91,7 @@ Moving on...
 
 Hmm... yeah I guess the rich aren't spared from COVID-19 either. Money can't buy happiness nor immunity 🤷‍♂️.
 
-## Chapter 5: The Results – The Final Outcome
+## Chapter 5: The Final Outcome
 
 You're probably thinking - wow, doesn't seem like he did much this project - nothing was a successful analysis. And you're right, I'm not going to deny that. I wasn't very proud of this project albeit my first, but you know what they say:
 

@@ -10,7 +10,7 @@ techStack: ["Python"]
 draft: false
 ---
 
-## Chapter 1: The Beginning – Why This Project?
+## Chapter 1: Why This Project?
 
 Back in the day, I was in charge of booking fields for frisbee trainings. Since the booking for slots starts at 12am, the process requires one to be awake and ready to book at that time.
 
@@ -29,7 +29,7 @@ Booking is super competitive. It is super frustrating when you fail to book your
 
 ---
 
-## Chapter 2: The Building – Investing Time to Save Time
+## Chapter 2: Investing Time to Save Time
 
 I've read about RPA (Robotic Process Automation), and it is used to speed up processes on repetitive tasks. Hence, I used Python and Selenium to speed up this repetitive task that occurs every week.
 
@@ -41,7 +41,7 @@ The booking system will send an email upon successful booking &ndash; the smell 
 
 ---
 
-## Chapter 3: The Result – The Hard Work Paid Off..?
+## Chapter 3: The Hard Work Paid Off..?
 
 It worked. It allowed me to have supper in peace. It allowed me to go to the toilet in peace. It allowed me to sleep in peace.
 

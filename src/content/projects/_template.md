@@ -80,7 +80,7 @@ No story ends without a look to the future. This chapter will explore what’s n
 
 ---
 
-## Bonus Chapter (Optional): Behind-the-Scenes – Unseen Moments
+## Bonus Chapter : Behind-the-Scenes – Unseen Moments
 
 Sometimes, it's not the destination but the journey itself that tells the best story. Here, I’ll share some behind-the-scenes moments, including the funny or unexpected bits that didn’t make it into the main narrative.
 
