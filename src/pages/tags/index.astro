@@ -5,6 +5,10 @@ import { getCollection } from "astro:content";
 import ProjectListCard from "@components/ProjectListCard.astro";
 
 const projects = await getCollection("projects", (post) => !post.data.draft);
+const sortedProjectsByTime = projects.sort(
+  (a, b) =>
+    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
 
 const allTags = [...new Set(projects.flatMap((project) => project.data.tags))];
 ---
@@ -34,7 +38,7 @@ const allTags = [...new Set(projects.flatMap((project) => project.data.tags))];
     <!-- Projects List -->
     <ul id="projectList" class="space-y-6 px-4">
       {
-        projects.map((project) => (
+        sortedProjectsByTime.map((project) => (
           <ProjectListCard
             title={project.data.title}
             description={project.data.description}
