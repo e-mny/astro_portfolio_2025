@@ -1,5 +1,5 @@
 ---
-title: "Portfolio Website"
+title: "Portfolio Website v1"
 hero: "~/assets/heros/astro_dark.png"
 heroAlt: "Portfolio Website"
 description: "Just a simple personal portfolio website to showcase projects and skills. Shouldn't be too difficult, right?"
