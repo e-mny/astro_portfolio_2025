@@ -13,7 +13,7 @@ draft: false
 
 ## Chapter 1: The Beginning – Why This Project?
 
-![Photo at Georgia Tech](../../assets/photos/GATech.jpg)
+![Photo at Georgia Tech](../../assets/projects/GATech.jpg)
 
 Returning from my exchange at Georgia Tech in November 2022, I was inspired by the brilliant minds I met there. They were either smart or hardworking, or both, and I understood what it truly meant by 'putting in the work'.
 
