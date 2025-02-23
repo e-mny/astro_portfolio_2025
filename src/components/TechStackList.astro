@@ -17,19 +17,24 @@ const { techStackList } = Astro.props;
           id={tech}
           class="px-3 py-2 text-sm font-medium flex items-center gap-2 text-light"
         >
-          {techInfo?.logo ? (
-            <span
-              class="text-xl rounded-md hover:scale-110 transition-all relative group"
-              style={{ color: techInfo?.hoverColor || "#333" }}
-            >
-              <Icon name={techInfo.logo} class="w-6" />
-              <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-white bg-black text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                {techInfo.text}
-              </span>
+          <span
+            class="text-xl rounded-md hover:scale-110 transition-all relative group"
+            style={{ color: techInfo?.hoverColor || "#333" }}
+          >
+            {techInfo?.logo ? (
+              <Icon name={techInfo?.logo} class="w-6" />
+            ) : (
+              <img
+                src={`/logos/${techInfo?.text.toLowerCase()}.svg`}
+                alt={techInfo?.text}
+                class="max-h-6 min-w-6 select-none pointer-events-none"
+              />
+            )}
+
+            <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-white bg-black text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+              {techInfo?.text}
             </span>
-          ) : (
-            <p class="text-white">{tech}</p>
-          )}
+          </span>
         </li>
       );
     })
