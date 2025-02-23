@@ -1,6 +1,7 @@
 ---
 import Icon from "astro-icon";
 import { Image } from "astro:assets";
+import Tags from "./Tags.astro";
 
 interface Props {
   title: string;
@@ -65,15 +66,7 @@ const { title, slugUrl, repoUrl, image, imageAlt, description, tags } =
         {description}
       </p>
 
-      <div class="flex flex-wrap gap-2 mt-2">
-        {
-          tags.map((tag) => (
-            <span class="rounded-md h-min px-2 py-1 text-sm dark:bg-zinc-700 bg-zinc-100 text-zinc-600 dark:text-zinc-300">
-              {tag}
-            </span>
-          ))
-        }
-      </div>
+      <Tags tags={tags} />
     </div>
   </div>
 </li>
