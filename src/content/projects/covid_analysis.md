@@ -12,6 +12,8 @@ draft: false
 
 ## Chapter 1: The Beginning – Why This Project?
 
+![Photo at Georgia Tech](../../assets/photos/GATech.jpg)
+
 Returning from my exchange at Georgia Tech in November 2022, I was inspired by the brilliant minds I met there. They were either smart or hardworking, or both, and I understood what it truly meant by 'putting in the work'.
 
 In life, you can't just get what you want by waiting for it &ndash; you got to WORK for it.
@@ -19,8 +21,6 @@ In life, you can't just get what you want by waiting for it &ndash; you got to W
 <center class="italic underline"> You got to put in the extra effort to get that bread. </center>
 
 I didn't have any personal projects back then, so it was time to get started.
-
-// Add image of Georgia Tech
 
 ---
 
@@ -113,4 +113,4 @@ People have asked me why I didn't work for MOH (Ministry of Health) as a data an
 
 - I didn't know they were hiring analysts for COVID-19
 - I thought they already had their own analysts, and wouldn't hire interns.
-- I didn't believe in my skills.
+- Imposter syndrome
