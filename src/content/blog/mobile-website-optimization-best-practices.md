@@ -3,11 +3,11 @@ title: Best Practices for Mobile Website Optimization
 description: In the digital age, mobile optimization is crucial for any website. This article provides best practices to ensure your website delivers an optimal experience on mobile devices.
 pubDate: 2023-11-08
 updatedDate: 2023-11-08
-hero: "~/assets/heros/mobile_website_optimization_best_practices.png"
+hero: "~/assets/heros/pwa_intro.png"
 heroAlt: "Illustration of mobile website optimization best practices"
-tags: ["web", "mobile", "optimization", "best practices", "website", "development"]
+tags:
+  ["web", "mobile", "optimization", "best practices", "website", "development"]
 ---
-
 
 In the digital era, mobile devices have become an integral part of our online experiences. From browsing the web to online shopping, mobile devices are embedded in our daily routines. As a website owner or developer, it's imperative to optimize your website for mobile devices. Here are some best practices to ensure your website delivers an optimal experience on mobile devices.
 
@@ -29,10 +29,10 @@ Page loading speed is a critical aspect of any website. It significantly impacts
 
 ## Optimize for Touch
 
-
 Mobile devices are primarily touch-based. Therefore, it's crucial to optimize your website for touch. This involves ensuring that buttons and links are large enough to be easily tapped on a mobile device. Moreover, you should ensure that there is enough space between buttons and links to prevent accidental taps.
 
 ### Testing
+
 Heelllo
 
 ## Use Mobile-Friendly Forms
