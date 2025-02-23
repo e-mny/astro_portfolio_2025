@@ -10,7 +10,7 @@
   padding: 0;
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Flex Variable", sans-serif;
   overscroll-behavior-y: none;
 }
 body::-webkit-scrollbar {

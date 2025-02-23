@@ -1,6 +1,7 @@
 ---
 import { author, defaultMeta } from "@data/socials";
 import "@fontsource-variable/inter";
+import "@fontsource-variable/roboto-flex";
 import Footer from "@components/Footer.astro";
 import "@styles/global.css";
 import NavBar from "@components/NavBar.astro";
@@ -38,7 +39,6 @@ const date = pubDate || lastmod || new Date();
   class="overflow-x-hidden break-words text-zinc-900 dark:text-zinc-100 dark"
 >
   <head>
-    <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{title.concat(" | ", author) || defaultMeta.title}</title>
