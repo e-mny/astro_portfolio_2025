@@ -2,10 +2,10 @@
 title: "Field Booker"
 hero: "~/assets/heros/pwa_intro.png"
 heroAlt: "Field Booker Hero Image"
-description: "A web application for booking sports fields and managing reservations."
+description: "An automated solution for booking sports fields using Python and Selenium, designed to save time and reduce frustration."
 pubDate: 2023-01-13
 updatedDate: 2023-04-17
-tags: ["automation", "python"]
+tags: ["automation", "python", "RPA", "web scraping"]
 techStack: ["Python"]
 draft: false
 ---
