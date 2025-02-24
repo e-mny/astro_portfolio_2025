@@ -34,8 +34,14 @@ const {
       {
         image && (
           <a href={slugUrl}>
-            <div class="flex justify-center items-center h-full">
-              <Image src={image} alt={imageAlt} height={200} width={400} />
+            <div class="flex justify-center items-center ">
+              <Image
+                src={image}
+                alt={imageAlt}
+                height={200}
+                width={400}
+                class="max-h-[25vh] min-h-[25vh]"
+              />
             </div>
           </a>
         )
