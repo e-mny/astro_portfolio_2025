@@ -1,5 +1,3 @@
-## Inspirations
-
 ### MVP Features
 
 - [ ] Project Detail Pages with Case Studies
