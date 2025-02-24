@@ -1,13 +1,13 @@
 ---
 title: "Portfolio Website v1"
-hero: "~/assets/heros/astro_dark.png"
+hero: "~/assets/heros/portfolio_website_v1.png"
 heroAlt: "Portfolio Website"
 description: "Just a simple personal portfolio website to showcase projects and skills. Shouldn't be too difficult, right?"
-pubDate: 2025-02-23
-updatedDate: 2025-02-23
+pubDate: 2024-09-04
+updatedDate: 2025-01-16
 tags: ["web development", "Astro", "react", "next.js", "svelte"]
 techStack: ["Astro", "JavaScript", "Markdown", "CSS", "HTML"]
-repoUrl: "https://github.com/e-mny/astro_portfolio_2025"
+repoUrl: "https://github.com/e-mny/astro_portfolio"
 draft: false
 ---
 
@@ -59,18 +59,24 @@ Enough talk about how much time I spent on searching, but perhaps I'll share mor
 
 Enough yapping, let's start writing code! I needed inspiration, so I went to Pinterest, Awwwards, Dribble to find the designs that spoke to me.
 
-![Apple's Bento Design](../../assets/projects/portfolio_website_2.jpg "Source: Apple")
+![Apple's Bento Design](../../assets/projects/portfolio_website_v1_2.jpg "Source: Apple")
 
-![Bento Design from Dribble](../../assets/projects/portfolio_website_1.jpg "Source: Dribble")
+![Bento Design from Dribble](../../assets/projects/portfolio_website_v1_1.jpg "Source: Dribble")
 
 I really liked Apple's marketing bento designs for their new products. I tried creating something similar, but it just didn't fit the vibe of a portfolio website. It felt more like a marketing website.
 
-![My Bento Website](../../assets/projects/portfolio_website_3.png "My Bento Personal Website")
+![My Bento Website](../../assets/projects/portfolio_website_v1_3.png "My Bento Personal Website")
 
 I also liked Apple's main page, something about it makes the design just so clean.
 
-![Screenshot from Apple's Website](../../assets/projects/portfolio_website_4.png "Source: Apple")
-![My Website inspired by Apple](../../assets/projects/portfolio_website_5.gif "My Personal Website Based on Apple")
+![Screenshot from Apple's Website](../../assets/projects/portfolio_website_v1_4.png "Source: Apple")
+
+<video autoplay loop muted playsinline class="w-5/6 h-auto text-white pointer-events-none cursor-none" aria-label="Demo of Portfolio Website v1">
+
+  <source src="/projects/portfolio_website_v1.webm" type="video/webm">
+  <source src="/projects/portfolio_website_v1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 Well... let's just say I tried. It was going well until I forgot to commit a bunch of changes to GitHub. Rookie mistake 😐.
 
@@ -85,20 +91,12 @@ Not my proudest moment, but I ended up going back to Astro because I get to use 
 
 ---
 
-## Chapter 4: Done Is Better Than Perfect
+## To Be Continued...
 
-By writing down everything that I wanted to implement on my website, I feel alot more relieved. I categorized the features I want for my MVP, and those that are for aesthetics and are optional.
+Evidently, v1 didn't follow through.
 
-Once all my MVP features are implemented, I will include it in my LinkedIn and resume, and when I feel like it, I'll work on the remaining optional features.
+But I learnt so much from it, and while it sucked, I'm glad to be more proficient in building websites now!
 
----
-
-## Chapter 5: The Result
-
-Well, when you see this, the website is ready to be SERVED (excluding the optional features).
-
-I want to try other frameworks to build websites or business landing sites in the future.
-
-Heard good things about Hugo for its fast build speeds so I really want to give that a try.
+[Click here to see the v2 of my portfolio website](/projects/portfolio_website_v2)
 
 Drop me an email to build websites for you!
