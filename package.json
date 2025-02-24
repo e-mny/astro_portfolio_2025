@@ -41,6 +41,7 @@
     "@astrojs/preact": "^4.0.4",
     "@astrojs/react": "^4.2.0",
     "@fontsource-variable/roboto-flex": "^5.1.1",
+    "@fontsource/dancing-script": "^5.1.1",
     "@fontsource/roboto": "^5.1.1",
     "@octokit/core": "^4.2.4",
     "@radix-ui/react-slot": "^1.1.2",
