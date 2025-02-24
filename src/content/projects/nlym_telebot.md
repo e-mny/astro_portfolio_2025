@@ -10,80 +10,71 @@ techStack: ["Python", "AWS"]
 draft: false
 ---
 
-## Chapter 1: The Beginning – Why This Project?
+## Chapter 1: It's About Drive
 
 This project began with a recurring issue within the church’s youth service team: the weekly task of checking the Google Sheets roster. Every week, the entire roster team had to visit the sheet, taking a few minutes of each person's time. Multiply that by the total number of team members, and you end up wasting quite a bit of time. I knew there had to be a better way.
 
 - **The Idea**: A Telegram bot that would automatically announce the weekly roster and save everyone time.
-- **Why It Matters**: This project wasn’t just about saving time &ndash; it was about improving the spiritual community by giving members an easy way to share prayer requests and keep up with their weekly duties.
+- **Why It Matters**: This project wasn’t just about saving time &ndash; it was about bonding the youths by giving members an easy way to share prayer requests and keep up with their weekly duties.
 
 ---
 
-## Chapter 2: The Research – Diving Into the Unknown
+## Chapter 2: It's About Power
 
-I started with the Telegram API documentation and tutorials. The integration of these resources helped me understand how to communicate with Telegram, fetch data, and automate messages.
+I started with studying the Telegram API documentation and tutorials. ~~The integration of these resources helped me understand how to communicate with Telegram, fetch data, and automate messages.~~ I did not understand anything.
 
-The biggest challenge was managing the interaction between Google Sheets and the Telegram bot. I had to figure out how to automate fetching and displaying the roster each week.
+Using the bots was one thing, but developing it to my use case was a whole different story. It being my first Telegram bot, I didn't understand what was 'Inline Keyboard', and the many many options that Telegram provided.
 
-The breakthrough came when I connected the Google Sheets API with the bot and successfully displayed the roster in the Telegram group chat. The first automated message was a huge relief.
+After I roughly understood how to get the bot to send a message, I had to link it to Google Sheets to extract roster data. Yet another problem.
 
----
-
-## Chapter 3: The Building – The Art of Creation
-
-Python was chosen for its ease of use and strong library and Telegram API support.
-It being my first Telegram bot, I didn't understand what was 'Inline Keyboard', and the many many options that Telegram provided.
-
-- **Milestones**: Key milestones included setting up the basic roster feature, adding the prayer request functionality, and integrating the Google Sheets API for weekly updates.
-- **Unexpected Challenges**: One of the challenges was ensuring the bot could properly handle user inputs for prayer requests. I also had to make sure that data privacy was respected, especially for those submitting prayer requests anonymously.
+Thankfully, I could leverage my experience with Pandas and handle the dataframes easily.
 
 ---
 
-## Chapter 4: The Struggles – The Darkest Hour
+## Chapter 3: We Stay Hungry, We Devour
 
-Every project has its tough times, and this one was no different.
+_(As I am typing this at 5:58pm, my stomach is growling. Can't wait for dinner!)_
 
-- **The Hardest Moments**: One of the toughest issues was keeping the bot running consistently, especially since it was initially hosted on my home server. Downtime and performance issues were frequent problems.
-- **Self-Doubt**: At times, I doubted whether the project would actually save time as planned. Would the bot be used consistently? Would the prayer box feature be helpful?
-- **The Lesson**: I learned the importance of robust hosting solutions and the need to test the bot thoroughly with real users before relying on it in a live setting.
+The ugliest part of coding this whole thing was probably the formatting of data.
 
----
+Firstly, I had to implement certain algorithms to parse data and dates correctly. It is not as simple as:
 
-## Chapter 5: The Breakthrough – The Turning Point
+```python
+import datetime
+```
 
-After much effort, the turning point came when the bot started working as intended.
+The way the Google Sheets was structured was easy to read by humans, but not so much by programming. I had to roleplay as a Python 🐍 to get the desired output.
 
-- **The Victory Moment**: The first time the bot successfully announced the weekly roster, and users began submitting prayer requests, I knew the project was a success.
-- **Celebrating Small Wins**: Each feature that worked smoothly, from the prayer request submission to the roster updates, was a win worth celebrating.
-- **Adjusting the Vision**: As the project evolved, I realized I wanted to make the bot more robust by migrating it to AWS for better scalability and reducing dependency on my home server.
+Secondly, I had to make sure the output was neat and formatted nicely, and not just a chunk of text. Doesn't help that you can't tag someone via the bot (I might be wrong about this, but at that point, I couldn't find this functionality).
 
 ---
 
-## Chapter 6: The Resolution – The Final Outcome
+## Chapter 4: Put In The Work & Hours
 
-The bot was fully functional and achieved its original goal: to save time and make communication within the church youth service team easier.
+![Picture of NLYM Bot](../../assets/projects/nlym_telebot_1.jpg "Picture of NLYM Bot")
 
-- **The Finished Product**: The final product is a Telegram bot that announces the weekly youth service roster and allows members to submit prayer requests, either anonymously or with their names attached. It has significantly reduced the time spent checking Google Sheets and created a community-driven prayer box.
-- **The Reflection**: Looking back, I am proud of the way the bot has been received. It’s been a huge success in terms of convenience and fostering connection within the church community.
-- **Key Takeaways**: One of the biggest lessons I learned was the power of automation to improve workflows and the importance of secure, reliable hosting for long-term use.
+When my bot was finally working and was sending everything correctly, it was time to PANGGANG (Hokkien for 'ending work'). Except that it didn't go through any user testing.
 
----
-
-## Chapter 7: The Epilogue – Looking Ahead
-
-Even with the bot fully deployed, the journey isn’t over.
-
-- **Future Plans**: I plan to migrate the bot to AWS to make it serverless, improving scalability and availability. Additionally, I want to add features like reminders for upcoming duties and the ability for users to easily check past prayer requests.
-- **Lessons Learned**: This project reinforced the value of planning for reliability, scalability, and user experience. It also taught me how important it is to get feedback from real users during the development phase.
-- **Gratitude**: I’m grateful for the support of my church community and the tools that made this project possible—especially the Telegram API, Python, and the resources available for deploying and scaling the bot.
+As this was used among a small group of co-workers, it was rather hard to get objective feedback since they're probably being considerate to me and would only give nice feedback to not hurt my feelings (I appreciate it though).
 
 ---
 
-## Bonus Chapter: Behind-the-Scenes – Unseen Moments
+## Chapter 5: And Take What's Ours
 
-Sometimes the most memorable moments of a project don’t make it to the final version.
+Currently the bot is running on my [home server](/projects/home_server), and I would have to keep it on all the time to make sure it is online. Thankfully, my parents have not asked me to pay for electricity bills...
 
-- **Unexpected Moments**: There were funny moments along the way, like when the bot accidentally sent the prayer request list to the entire congregation instead of just the youth service team!
-- **The "Aha!" Moments**: The most satisfying moment was realizing that what started as a small idea to save time would turn into something that helped people connect and share their spiritual needs more easily.
+Given how unused this bot is, I'm ready to scrap it and shut it down to save electricity costs. It was only recently that I found out about AWS Lambda, a serverless function that allows the calling of Telegram commands without paying (until AWS decides to profit from us ahhh).
+
+I have plans to transfer this bot over to AWS Lambda to reduce that reliance on my home server being on 24/7. That said, I probably need to move this whole thing over to Whatsapp.
+
+Anywho, given the low demand and usage of this bot, it's probably quite low in my priority list. I will probably redo it next time, when I run out of projects to do (totally not procrastinating this project).
 
 ---
+
+## ... After Credits
+
+I had a brief look over how to write a Whatsapp bot... and it basically required me to rewrite all my code because it uses a different interface altogether. I'm not even sure if they use the same language (the last I saw, they use JavaScript but 🤷‍♂️)
+
+But I thought of building a Whatsapp bot for my church to use - kinda like a chatbot which answers people's general queries. Perhaps the youth service feature could be put together... Who knows...
+
+In case you're wondering why the chapter names are so weird, it's a reference from The Rock's song 'Face Off'!

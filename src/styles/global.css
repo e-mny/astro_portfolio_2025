@@ -93,6 +93,11 @@ img[alt='Photo at Georgia Tech']{
   width: auto;
 }
 
+img[alt='Picture of NLYM Bot']{
+  height: 30rem;
+  width: auto;
+}
+
 a>img[alt='Web Framework Comparison Video'] {
   height: 10rem;
   width: auto;
