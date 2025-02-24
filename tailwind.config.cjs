@@ -9,6 +9,7 @@ module.exports = {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
         sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
+        dancing: ['Dancing Script', 'cursive'],
       },
       colors: {
         // Primary blue
