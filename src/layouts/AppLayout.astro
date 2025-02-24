@@ -112,7 +112,15 @@ const date = pubDate || lastmod || new Date();
     <meta name="pubdate" content={(pubDate || new Date()).toString()} />
     <meta name="date" content={date.toString()} />
     <meta name="keywords" content={tags.join(", ")} />
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("img").forEach((img) => {
+          img.setAttribute("loading", "eager");
+        });
+      });
+    </script> -->
   </head>
+
   <body
     class="dark:bg-zinc-900 bg-zinc-100 antialiased selection:bg-blue-300 selection:text-zinc-900 dark:selection:bg-blue-600 dark:selection:text-white 2xl:text-lg flex flex-col"
   >

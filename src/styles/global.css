@@ -81,6 +81,11 @@ img{
   display: block;
   margin-left: auto;
   margin-right: auto;
+  
+}
+
+video{
+  border-radius: 0.5rem;
 }
 
 img[alt='Photo at Georgia Tech']{

@@ -30,6 +30,12 @@ Before building the bot, I had to understand how to access public facility data 
 
 ## Chapter 3: The What?
 
+<video autoplay loop muted playsinline class="w-5/6 h-auto text-white pointer-events-none cursor-none" aria-label="Demo of FitLah bot">
+  <source src="/projects/fitlah_bot_start.webm" type="video/webm">
+  <source src="/projects/fitlah_bot_start.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 Once the foundations were set, it was time to bring **FitLah Bot** to life.
 
 - **Tech Stack Choices**:
@@ -53,6 +59,12 @@ The periods of 30 seconds wait always made me anxious &ndash; will my fix finall
 
 ## Chapter 5: The Yay!
 
+<video autoplay loop muted playsinline class="w-5/6 h-auto text-white pointer-events-none cursor-none z-50" aria-label="Demo of FitLah bot adding user's favourites">
+  <source src="/projects/fitlah_bot_addfav.webm" type="video/webm">
+  <source src="/projects/fitlah_bot_addfav.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 After countless iterations and debugging sessions, things started falling into place.
 
 - **The Victory Moment**: Successfully integrating user favorites, allowing people to check their preferred gym or pool with a single command.
@@ -61,6 +73,12 @@ After countless iterations and debugging sessions, things started falling into p
 ---
 
 ## Chapter 6: The Now!
+
+<video autoplay loop muted playsinline class="w-5/6 h-auto text-white pointer-events-none cursor-none" aria-label="Demo of FitLah bot showing user's favourites">
+  <source src="/projects/fitlah_bot_showfav.webm" type="video/webm">
+  <source src="/projects/fitlah_bot_showfav.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 At this stage, **FitLah Bot** became fully functional and ready for real-world use.
 
@@ -74,16 +92,15 @@ At this stage, **FitLah Bot** became fully functional and ready for real-world u
 There's always room for improvement, and I make sure to consider everyone's feedback.
 
 - **Future Plans**:
-  - Implement **predictive analytics** to estimate crowdedness based on past data, time of day, and weather.
-  - Improve **notification systems**, so users can get real-time alerts when their favorite facility is below a certain capacity.
-- **Lessons Learned**: Balancing **real-time performance, data accuracy, and scalability** is crucial when working with automation.
+  - Implement predictive analytics to estimate crowdedness based on past data, time of day, and weather.
+  - Improve notification systems, so users can get real-time alerts when their favorite facility is below a certain capacity.
 
 ---
 
 ## Appendix
 
-Feel free to try out **FitLah Bot** on Telegram and get real-time updates on ActiveSG's gym and pool capacities.
+Try out **FitLah Bot** on Telegram and get real-time updates on ActiveSG's gym and pool capacities!
 
-Feedback is always appreciated! 😄
+Feedback is always appreciated via the `/feedback` command 😄
 
-[Click here to start using FitLah Bot](https://t.me/fitlahsg_bot)
+[Click here to start using FitLah Bot!](https://t.me/fitlahsg_bot)
