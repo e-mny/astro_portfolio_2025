@@ -1,6 +1,6 @@
 ---
 title: "Youth Service Telegram Bot"
-hero: "~/assets/heros/pwa_intro.png"
+hero: "~/assets/heros/telegram_bot_unsplash.jpg"
 heroAlt: "Youth Service Telegram Bot Hero Image"
 description: "A Telegram bot designed to announce the weekly youth service roster and facilitate prayer requests for the church community."
 pubDate: 2024-03-19

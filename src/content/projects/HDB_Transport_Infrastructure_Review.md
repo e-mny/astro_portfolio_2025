@@ -1,13 +1,13 @@
 ---
 title: "HDB Transport Infrastructure Review"
-hero: "~/assets/heros/pwa_intro.png"
+hero: "~/assets/heros/hdb_unsplash.jpg"
 heroAlt: "HDB Transport Infrastructure Review Hero Image"
 description: "A comprehensive review of the transport infrastructure in HDB estates to identify areas for improvement."
 pubDate: 2023-01-15
 updatedDate: 2023-02-20
 tags: ["urban planning", "transport infrastructure", "HDB"]
 techStack: ["GIS", "Data Analysis", "Python"]
-draft: True
+draft: false
 ---
 
 ## Chapter 1: The Beginning – Why This Project?

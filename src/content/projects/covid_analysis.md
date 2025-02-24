@@ -1,6 +1,6 @@
 ---
 title: "COVID-19 Analysis"
-hero: "~/assets/heros/pwa_intro.png"
+hero: "~/assets/heros/covid_unsplash.jpg"
 heroAlt: "COVID-19 Analysis Hero Image"
 description: "A data analysis project focused on understanding the spread and impact of COVID-19."
 pubDate: 2022-12-05
