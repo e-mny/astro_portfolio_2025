@@ -6,8 +6,8 @@ description: "A comprehensive review of the transport infrastructure in HDB esta
 pubDate: 2023-01-15
 updatedDate: 2023-02-20
 tags: ["urban planning", "transport infrastructure", "HDB"]
-techStack: ["GIS", "Data Analysis", "Python"]
-draft: false
+techStack: ["Python", "Seaborn", "Matplotlib"]
+draft: true
 ---
 
 ## Chapter 1: The Beginning – Why This Project?
