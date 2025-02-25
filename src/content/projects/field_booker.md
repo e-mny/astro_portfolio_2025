@@ -5,7 +5,7 @@ heroAlt: "Field Booker Hero Image"
 description: "An automated solution for booking sports fields using Python and Selenium, designed to save time and reduce frustration."
 pubDate: 2023-01-13
 updatedDate: 2023-04-17
-tags: ["automation", "python", "web scraping"]
+tags: ["automation", "Python", "web scraping"]
 techStack: ["Python"]
 repoUrl: "https://github.com/e-mny/field_booker"
 draft: false

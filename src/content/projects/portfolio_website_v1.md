@@ -5,7 +5,7 @@ heroAlt: "Portfolio Website v1"
 description: "Just a simple personal portfolio website to showcase projects and skills. Shouldn't be too difficult, right?"
 pubDate: 2024-09-04
 updatedDate: 2025-01-16
-tags: ["web development", "Astro", "react", "next.js", "svelte"]
+tags: ["web development", "Astro", "React", "Next.js", "Svelte"]
 techStack: ["Astro", "JavaScript", "Markdown", "CSS", "HTML"]
 repoUrl: "https://github.com/e-mny/astro_portfolio"
 draft: false

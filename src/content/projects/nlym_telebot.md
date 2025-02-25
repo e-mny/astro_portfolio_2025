@@ -5,7 +5,7 @@ heroAlt: "Youth Service Telegram Bot Hero Image"
 description: "A Telegram bot designed to announce the weekly youth service roster and facilitate prayer requests for the church community."
 pubDate: 2024-03-19
 updatedDate: 2025-01-06
-tags: ["telegram", "automation", "api", "python", "chatbot"]
+tags: ["Telegram", "automation", "API", "Python", "chatbot"]
 techStack: ["Python", "AWS"]
 draft: false
 ---
