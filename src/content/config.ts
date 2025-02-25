@@ -36,7 +36,7 @@ const nowCollection = defineCollection({
   schema: (() =>
     z.object({
       title: z.string().max(80),
-      description: z.string().max(220),
+      description: z.string().max(220).optional(),
       pubDate: z.date(),
       updatedDate: z.date().optional(),
     }))
