@@ -22,9 +22,14 @@ const { title, description, pubDate, updatedDate, firstPost } = Astro.props;
   <article class="prose dark:prose-invert p-6">
     <slot />
   </article>
-  {!firstPost ? <p class="text-sm text-zinc-500">
-    Published on {new Date(pubDate).toLocaleDateString()}
-  </p> 
-  <Pagination mode="now"/>
-  : null}
+  {
+    !firstPost ? (
+      <>
+        <p class="text-sm text-zinc-500">
+          Published on {new Date(pubDate).toLocaleDateString()}
+        </p>
+        <Pagination mode="now" />
+      </>
+    ) : null
+  }
 </AppLayout>

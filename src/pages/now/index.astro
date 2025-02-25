@@ -3,7 +3,6 @@ import NowLayout from "@layouts/NowLayout.astro";
 import ArchiveList from "@components/NowArchiveList.astro";
 import { getCollection } from "astro:content";
 import { getRelativeTime } from "src/utils";
-import { isAstroComponentFactory } from "astro/runtime/server/render/astro/factory.js";
 
 const archives = await getCollection("now");
 archives.sort(
@@ -11,11 +10,8 @@ archives.sort(
     new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
 );
 const latestArchive = await archives[0];
-let Content = isAstroComponentFactory;
-if (latestArchive) {
-  const renderResult = await latestArchive.render();
-  Content = renderResult.Content;
-}
+
+const { Content } = await latestArchive.render();
 
 const lastUpdatedDate = getRelativeTime(new Date(latestArchive?.data.updatedDate || latestArchive?.data.pubDate || Date.now()));
 ---
