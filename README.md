@@ -5,6 +5,7 @@
 - [ ] Fast Load Times with Optimized Assets
 - [ ] Basic Accessibility Compliance (ARIA, Contrast, Keyboard Navigation)
 - [ ] In 'about' page, have a section for Interactive Timeline or Work History Section before Tech Stack
+- Start with professional MKWii Player at p5
 - [x] Deployment to a Live Server (Netlify, Vercel, or Custom Hosting)
 - [x] Home Page
 - [x] About Section
