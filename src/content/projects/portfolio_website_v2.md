@@ -1,7 +1,7 @@
 ---
 title: "Portfolio Website v2"
 hero: "~/assets/heros/portfolio_website_v2.png"
-heroAlt: "Portfolio Website"
+heroAlt: "Portfolio Website v2"
 description: "V2 of my portfolio website. I probably learnt my lessons, right?"
 pubDate: 2025-02-23
 updatedDate: 2025-02-23

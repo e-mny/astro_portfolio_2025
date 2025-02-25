@@ -1,7 +1,7 @@
 ---
 title: "Portfolio Website v1"
 hero: "~/assets/heros/portfolio_website_v1.png"
-heroAlt: "Portfolio Website"
+heroAlt: "Portfolio Website v1"
 description: "Just a simple personal portfolio website to showcase projects and skills. Shouldn't be too difficult, right?"
 pubDate: 2024-09-04
 updatedDate: 2025-01-16
