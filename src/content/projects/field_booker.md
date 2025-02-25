@@ -7,6 +7,7 @@ pubDate: 2023-01-13
 updatedDate: 2023-04-17
 tags: ["automation", "python", "web scraping"]
 techStack: ["Python"]
+repoUrl: "https://github.com/e-mny/field_booker"
 draft: false
 ---
 
