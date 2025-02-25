@@ -5,7 +5,7 @@ heroAlt: "COVID-19 Analysis Hero Image"
 description: "A data analysis project focused on understanding the spread and impact of COVID-19."
 pubDate: 2022-12-05
 updatedDate: 2025-02-23
-tags: ["medical", "data visualization", "data science", "python", "sql"]
+tags: ["medical", "data visualization", "data science", "python", "SQL"]
 techStack: ["Python", "Pandas", "Matplotlib", "SQLite"]
 repoUrl: "https://github.com/e-mny/covid_analysis"
 draft: false
