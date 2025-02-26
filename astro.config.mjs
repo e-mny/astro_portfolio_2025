@@ -9,21 +9,18 @@ import remarkToc from "remark-toc";
 
 import react from "@astrojs/react";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
   build: {
     format: "file",
   },
-  integrations: [
-    tailwind({ applyBaseStyles: false }),
-    compressor(),
-    mdx(),
-    react(),
-  ],
+  integrations: [tailwind({ applyBaseStyles: false }), compressor(), mdx(), react(), sitemap()],
   image: {
     service: sharpImageService(),
   },
-  site: "https://cojocarudavid.me",
+  site: "https://enochmok.vercel.app",
   vite: {
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
