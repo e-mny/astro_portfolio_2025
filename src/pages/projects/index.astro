@@ -4,7 +4,10 @@ import Header from "@components/Header.astro";
 import ProjectCard from "@components/ProjectCard.astro";
 import { getCollection } from "astro:content";
 
-const projects = await getCollection("projects", (post) => !post.data.draft);
+const projects = await getCollection(
+  "projects",
+  (post) => !post.data.draft && !post.data.archive
+);
 const sortedProjectsByTime = projects.sort(
   (a, b) =>
     new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()

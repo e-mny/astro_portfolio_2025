@@ -4,7 +4,7 @@ import Pagination from "@components/Pagination.astro";
 
 interface Props {
   title: string;
-  description: string;
+  description?: string | undefined;
   pubDate: Date;
   updatedDate: Date | undefined;
   firstPost?: boolean;
