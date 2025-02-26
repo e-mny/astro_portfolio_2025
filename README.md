@@ -1,10 +1,13 @@
 ### MVP Features
 
 - [ ] Project Detail Pages with Case Studies
+- [ ] AND/OR filter in filter in /tags
 - [ ] SEO Optimization for Better Search Visibility
 - [ ] Fast Load Times with Optimized Assets
 - [ ] Basic Accessibility Compliance (ARIA, Contrast, Keyboard Navigation)
 - [ ] In 'about' page, have a section for Interactive Timeline or Work History Section before Tech Stack
+- [ ] Only show projects that you're proud of
+- [ ] Add user interactivity for data science projects
 - Start with professional MKWii Player at p5
 - [x] Deployment to a Live Server (Netlify, Vercel, or Custom Hosting)
 - [x] Home Page
@@ -27,6 +30,10 @@
 - [ ] Contact Form with reCAPTCHA to Prevent Spam
 - [ ] Testimonials or Reviews Section
 - [ ] Replace Hero Image with Sims Avatar
+- [ ] Remove past 'now' list in /now, and put it under tags
+- [ ] Rename tags to archives
+- [ ] Create an LLM copy that will allow user to ask question about me. (not sure if that is possible with static website)
+      Allow users to navigate through the website if he doesn't want to use the LLM to ask questions
 - [ ] Custom Domain Name Setup
 - [ ] Google Analytics for Traffic Monitoring
 - [x] Image Gallery
