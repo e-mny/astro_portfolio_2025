@@ -3,11 +3,12 @@ title: "FitLah Bot"
 hero: "~/assets/projects/fitlah_bot_1.jpg"
 heroAlt: "FitLah Bot Hero Image"
 description: "A Telegram bot that provides real-time public gym and pool capacity in Singapore, helping users plan their workouts efficiently."
-pubDate: 2023-02-11
+pubDate: 2025-02-11
 updatedDate: 2025-02-15
 tags: ["chatbot", "Python", "automation", "Telegram", "API"]
 techStack: ["Python", "AWS", "Supabase"]
 draft: False
+archive: false
 ---
 
 ## Chapter 1: The Why?
