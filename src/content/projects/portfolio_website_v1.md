@@ -9,6 +9,7 @@ tags: ["web development", "Astro", "React", "Next.js", "Svelte"]
 techStack: ["Astro", "JavaScript", "Markdown", "CSS", "HTML"]
 repoUrl: "https://github.com/e-mny/astro_portfolio"
 draft: false
+archive: false
 ---
 
 ## Chapter 1: The Beginning

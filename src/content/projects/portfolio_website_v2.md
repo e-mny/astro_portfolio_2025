@@ -9,6 +9,7 @@ tags: ["web development", "Astro"]
 techStack: ["Astro", "JavaScript", "Markdown", "CSS", "HTML"]
 repoUrl: "https://github.com/e-mny/astro_portfolio_2025"
 draft: false
+archive: false
 ---
 
 ## Chapter 1: Done Is Better Than Perfect
