@@ -21,21 +21,22 @@
 
 ### Optional Features
 
+- [ ] Google Analytics for Traffic Monitoring
 - [ ] Footer to always stay at the bottom for all pages
 - [ ] Search Feature
 - [ ] Toggling Dark Mode
 - [ ] In 'about' page, snap sections to scrolls
 - [ ] In 'about' page, when hovering over each phrase, a box will move to cover that phrase, to show what I will do.
       For eg: Datasets have stories - [ I tell them ]
-- [ ] Contact Form with reCAPTCHA to Prevent Spam
-- [ ] Testimonials or Reviews Section
+- [ ] Show live stats for Fitlah Bot
 - [ ] Replace Hero Image with Sims Avatar
 - [ ] Remove past 'now' list in /now, and put it under tags
 - [ ] Rename tags to archives
+- [ ] Contact Form with reCAPTCHA to Prevent Spam
+- [ ] Testimonials or Reviews Section
 - [ ] Create an LLM copy that will allow user to ask question about me. (not sure if that is possible with static website)
       Allow users to navigate through the website if he doesn't want to use the LLM to ask questions
 - [ ] Custom Domain Name Setup
-- [ ] Google Analytics for Traffic Monitoring
 - [x] Image Gallery
 
 ### Bugs
