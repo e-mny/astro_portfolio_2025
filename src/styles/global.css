@@ -98,6 +98,11 @@ img[alt='Picture of NLYM Bot']{
   width: auto;
 }
 
+img[alt='Upcoming MRT Projects by LTA']{
+  height: 50rem;
+  width: auto;
+}
+
 a>img[alt='Web Framework Comparison Video'] {
   height: 10rem;
   width: auto;

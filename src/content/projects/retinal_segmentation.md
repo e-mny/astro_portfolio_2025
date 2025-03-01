@@ -8,6 +8,7 @@ updatedDate: 2023-02-20
 tags: ["deep learning", "medical imaging", "retinal segmentation"]
 techStack: ["Python", "Keras", "OpenCV"]
 draft: True
+archive: true
 ---
 
 ## Chapter 1: The Beginning – Why This Project?

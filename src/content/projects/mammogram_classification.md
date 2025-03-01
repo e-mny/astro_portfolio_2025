@@ -8,6 +8,7 @@ updatedDate: 2023-02-20
 tags: ["machine learning", "healthcare", "image classification"]
 techStack: ["Python", "TensorFlow", "Keras"]
 draft: True
+archive: true
 ---
 
 ## Chapter 1: The Beginning – Why This Project?

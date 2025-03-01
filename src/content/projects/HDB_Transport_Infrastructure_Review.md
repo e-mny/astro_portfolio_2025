@@ -2,87 +2,114 @@
 title: "HDB Transport Infrastructure Review"
 hero: "~/assets/heros/hdb_unsplash.jpg"
 heroAlt: "HDB Transport Infrastructure Review Hero Image"
-description: "A comprehensive review of the transport infrastructure in HDB estates to identify areas for improvement."
-pubDate: 2023-01-15
-updatedDate: 2023-02-20
-tags: ["urban planning", "transport infrastructure", "HDB"]
+description: "A review of public transport infrastructure in HDB towns, assessing disparities and recommending improvements."
+pubDate: 2024-07-15
+updatedDate: 2024-07-23
+tags: ["data visualization", "API", "python", "data science"]
 techStack: ["Python", "Seaborn", "Matplotlib"]
-draft: true
+draft: false
+archive: false
 ---
 
-## Chapter 1: The Beginning – Why This Project?
+## Understanding Transport Disparities in HDB Towns
 
-At the beginning, there was a problem that needed solving, and I found myself deeply intrigued by it. This chapter introduces the spark for the project and the motivation that drove me to embark on this journey.
+I was always passionate about the transport system. When I was young, I was so mesmerized by all the
 
-- **The Idea**: The idea was to conduct a comprehensive review of the transport infrastructure in HDB estates to identify areas for improvement.
-- **Why It Matters**: This project was significant as it aimed to improve the quality of life for residents by enhancing transport infrastructure.
+One fine day, I was taking the MRT to meet my friends (or something). I was curious.
 
----
+Are there HDB towns that are significantly underserved by public transport?
 
-## Chapter 2: The Research – Diving Into the Unknown
+#### **📌 The Research Questions**
 
-This is the chapter where I started diving deep into the research and learning phase. I spent hours reading documentation, tutorials, and articles, but the road wasn’t always smooth.
+- Which areas have **insufficient transport infrastructure** compared to population density?
+- How do **bus stops and MRT stations** align with **demand**?
+- Are there **specific MRT phases** that should be accelerated?
 
-- **Learning the Basics**: I relied on GIS documentation, urban planning guides, and data analysis tutorials.
-- **The Struggles**: Understanding complex GIS tools and analyzing large datasets were major challenges.
-- **Moment of Clarity**: The breakthrough moment was when I successfully analyzed the data and identified key areas for improvement.
+#### **🔍 Interactive Overview: Public Transport Infrastructure**
 
----
+Explore the **overall transport density** across Singapore in the interactive map below:
 
-## Chapter 3: The Building – The Art of Creation
-
-This chapter is all about the _doing_. It’s where the project took shape and everything started coming together.
-
-- **Tech Stack Choices**: GIS was chosen for its powerful mapping capabilities. Python was used for data analysis and visualization.
-- **Milestones**: Key milestones included collecting data, analyzing transport infrastructure, and presenting findings.
-- **Unexpected Challenges**: Ensuring data accuracy and handling large datasets were significant challenges.
-- **Personal Struggles**: There were moments of doubt, especially when facing complex analysis, but perseverance and community support helped me push through.
+<iframe src="/projects/hdb_transport_infrastructure_review/singaporePT.html" width="100%" height="500px"></iframe>
 
 ---
 
-## Chapter 4: The Struggles – The Darkest Hour
+## **🚌 Analyzing Bus Stop Density**
 
-Every story has a dark chapter, and this is where things didn’t go as planned.
+Bus stop distribution is **not uniform**, with some towns experiencing **notable shortages**.
 
-- **The Hardest Moments**: Major issues included data inconsistencies and analysis errors.
-- **Self-Doubt**: I questioned whether I could achieve the desired level of accuracy and reliability.
-- **The Lesson**: These struggles taught me the importance of thorough data validation and the value of community support.
+#### **🚦 Key Findings**
 
----
+- Areas with **significant bus stop shortages**:
+  1. **River Valley**
+  2. **Punggol**
+  3. **Sengkang**
+  4. **Choa Chu Kang**
+  5. **Newton**
 
-## Chapter 5: The Breakthrough – The Turning Point
+#### **📍 Interactive Map: Bus Stop Density Discrepancies**
 
-Every story has a turning point, a moment where everything changes.
+The heatmap below visualizes **bus stop coverage gaps**:
 
-- **The Victory Moment**: Successfully presenting the findings and receiving positive feedback was a significant victory.
-- **Celebrating Small Wins**: Each resolved data issue and improved analysis was a small win that kept me motivated.
-- **Adjusting the Vision**: The project evolved to include more detailed analysis and better visualization techniques.
-
----
-
-## Chapter 6: The Resolution – The Final Outcome
-
-This is the chapter where the project comes to life.
-
-- **The Finished Product**: The final product is a comprehensive review of the transport infrastructure in HDB estates with actionable recommendations.
-- **The Reflection**: This project enhanced my understanding of urban planning and taught me the importance of data accuracy.
-- **Key Takeaways**: If I could redo this project, I would focus more on initial data validation and analysis planning.
+<iframe src="/projects/hdb_transport_infrastructure_review/bus_density_map.html" width="100%" height="500px"></iframe>
 
 ---
 
-## Chapter 7: The Epilogue – Looking Ahead
+## **🚇 MRT Station Density – Are Some Areas Underserved?**
 
-No story ends without a look to the future.
+While the MRT network is extensive, **certain HDB towns have significantly fewer train stations** than needed.
 
-- **Future Plans**: I plan to conduct similar reviews for other urban areas and improve analysis techniques.
-- **Lessons Learned**: Key takeaways include the importance of continuous learning and the value of data accuracy.
-- **Gratitude**: I am grateful to the GIS community, online tutorials, and my peers for their support and guidance.
+#### **🚉 Top Areas with Train Stop Shortages**
+
+1. **Choa Chu Kang**
+2. **Sengkang**
+3. **Toa Payoh**
+4. **Hougang**
+5. **Woodlands**
+
+#### **📊 Interactive Map: Train Stop Density Discrepancies**
+
+Explore which areas require **more MRT stations**:
+
+<iframe src="/projects/hdb_transport_infrastructure_review/train_density_map.html" width="100%" height="500px"></iframe>
 
 ---
 
-## Bonus Chapter : Behind-the-Scenes – Unseen Moments
+## **🌍 Combined Transport Density Analysis**
 
-Sometimes, the most interesting parts of a project aren’t in the final version.
+To assess the overall public transport accessibility, I calculated a **transport density discrepancy score**, which considers both **bus stops and MRT stations**.
 
-- **Unexpected Moments**: Funny bugs and unexpected insights that shaped the final product.
-- **The "Aha!" Moments**: Realizing the power of GIS and how it simplified the analysis process.
+#### **📊 Interactive Map: Overall Public Transport Gaps**
+
+The following heatmap highlights areas with the **largest transport accessibility issues**:
+
+<iframe src="/projects/hdb_transport_infrastructure_review/total_density_map.html" width="100%" height="500px"></iframe>
+
+---
+
+## **🏗️ Future Transport Planning – What Should Be Prioritized?**
+
+Based on the findings, the following **MRT phases** should be prioritized for acceleration:
+
+#### **🚆 Recommended MRT Expansions**
+
+- **Jurong Region Line (JRL) Phase 1 (2027)**
+- **Cross Island Line (CRL) Phase 1 (2030)**
+- **CRL Punggol Extension (2032)**
+
+![Upcoming MRT Projects by LTA](../../assets/projects/hdb_transport_infrastructure_review_1.jpg "Announced MRT Projects by LTA as of 2025")
+
+---
+
+## **🔮 Key Takeaways & Future Directions**
+
+#### **📌 Final Thoughts**
+
+- Public transport infrastructure **varies significantly** across HDB towns.
+- Certain MRT phases **should be accelerated** to address high-demand areas.
+- **Interactive maps help visualize transport gaps effectively.**
+
+#### **🔬 Next Steps**
+
+- Analyze **weekend vs. weekday transport accessibility**.
+- Study **first-mile/last-mile connectivity issues**.
+- Expand this study to **commercial and industrial zones**.
