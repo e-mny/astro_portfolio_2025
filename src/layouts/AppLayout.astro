@@ -46,11 +46,17 @@ const date = pubDate || lastmod || new Date();
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{title.concat(" | ", author) || defaultMeta.title}</title>
     <link rel="canonical" href={canonicalURL} />
-    <meta name="title" content={title} />
+    <meta
+      name="title"
+      content={title.concat(" | ", author) || defaultMeta.title}
+    />
     <meta name="description" content={description} />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:title" content={title} />
+    <meta
+      property="og:title"
+      content={title.concat(" | ", author) || defaultMeta.title}
+    />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageURL} />
     <meta property="og:site_name" content={author} />
@@ -59,7 +65,10 @@ const date = pubDate || lastmod || new Date();
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="https://enochmok.vercel.app" />
     <meta name="twitter:creator" content={author} />
-    <meta name="twitter:title" content={title} />
+    <meta
+      name="twitter:title"
+      content={title.concat(" | ", author) || defaultMeta.title}
+    />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageURL} />
     <meta name="twitter:image:alt" content={ogImage.alt} />
@@ -67,8 +76,14 @@ const date = pubDate || lastmod || new Date();
     <meta name="theme-color" content="#60A5FA" />
     <meta name="msapplication-TileColor" content="#60A5FA" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="apple-mobile-web-app-title" content={title} />
-    <meta name="application-name" content={title} />
+    <meta
+      name="apple-mobile-web-app-title"
+      content={title.concat(" | ", author) || defaultMeta.title}
+    />
+    <meta
+      name="application-name"
+      content={title.concat(" | ", author) || defaultMeta.title}
+    />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="follow, index" />
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
