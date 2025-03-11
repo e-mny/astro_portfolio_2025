@@ -74,11 +74,11 @@
   "browserslist": "> 0.25%, not dead",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cojocaru-david/cojocarudavid.me.git"
+    "url": "https://github.com/e-mny/astro_portfolio_2025"
   },
   "bugs": {
-    "url": "https://github.com/cojocaru-david/cojocarudavid.me/issues"
+    "url": "https://github.com/e-mny/astro_portfolio_2025/issues"
   },
-  "homepage": "https://cojocarudavid.me",
+  "homepage": "https://enochmok.vercel.app",
   "private": false
 }
