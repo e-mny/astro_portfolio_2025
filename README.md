@@ -2,13 +2,13 @@
 
 - [ ] Project Detail Pages with Case Studies
 - [ ] AND/OR filter in filter in /tags
-- [ ] SEO Optimization for Better Search Visibility
 - [ ] Fast Load Times with Optimized Assets
 - [ ] Basic Accessibility Compliance (ARIA, Contrast, Keyboard Navigation)
 - [ ] In 'about' page, have a section for Interactive Timeline or Work History Section before Tech Stack
-- [ ] Only show projects that you're proud of
+      Start with professional MKWii Player at p5
 - [ ] Add user interactivity for data science projects
-- Start with professional MKWii Player at p5
+- [x] Only show projects that you're proud of
+- [x] SEO Optimization for Better Search Visibility
 - [x] Deployment to a Live Server (Netlify, Vercel, or Custom Hosting)
 - [x] Home Page
 - [x] About Section
@@ -21,7 +21,7 @@
 
 ### Optional Features
 
-- [ ] Google Analytics for Traffic Monitoring
+- [x] Google Analytics for Traffic Monitoring
 - [ ] Footer to always stay at the bottom for all pages
 - [ ] Search Feature
 - [ ] Toggling Dark Mode
