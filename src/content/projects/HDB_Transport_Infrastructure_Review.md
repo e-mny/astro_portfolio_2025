@@ -13,7 +13,7 @@ archive: false
 
 ## Understanding Transport Disparities in HDB Towns
 
-I was always passionate about the transport system. When I was young, I was so mesmerized by all the
+I was always passionate about the transport system. When I was young, I was so mesmerized by all the sketches of the future transportation system in Singapore - though it didn't occur to me that Singapore might sink if we were to do that.
 
 One fine day, I was taking the MRT to meet my friends (or something). I was curious.
 
