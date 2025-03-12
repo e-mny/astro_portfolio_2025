@@ -8,7 +8,7 @@ export const linkedin = "https://www.linkedin.com/in/enochmok/"
 export const defaultMeta = {
   title: "Enoch Mok - Home",
   description:
-    "Enoch Mok's portfolio website. A data scientist specializing in software, web development, and programming.",
+    "A passionate data scientist specializing in software and web development!",
   keywords: ["enoch mok", "data scientist", "analyst", "software", "web development", "programming", "portfolio", "blog", "singapore"],
   ogImage: {
     src: "/banner.png",
