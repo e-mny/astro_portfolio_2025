@@ -2,11 +2,11 @@
 
 - [ ] Project Detail Pages with Case Studies
 - [ ] AND/OR filter in filter in /tags
-- [ ] Fast Load Times with Optimized Assets
 - [ ] Basic Accessibility Compliance (ARIA, Contrast, Keyboard Navigation)
 - [ ] In 'about' page, have a section for Interactive Timeline or Work History Section before Tech Stack
       Start with professional MKWii Player at p5
 - [ ] Add user interactivity for data science projects
+- [x] Fast Load Times with Optimized Assets
 - [x] Only show projects that you're proud of
 - [x] SEO Optimization for Better Search Visibility
 - [x] Deployment to a Live Server (Netlify, Vercel, or Custom Hosting)
