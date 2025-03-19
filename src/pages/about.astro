@@ -11,63 +11,71 @@ import ImageGallery from "@/components/ImageGallery.astro";
 ---
 
 <AppLayout title="About">
-  <header
-    class="h-screen flex flex-col sm:flex-row sm:items-center sm:justify-between max-w-3xl gap-8 md:gap-2 snap-start md:pb-12 pb-8"
+  <section
+    class="h-screen min-h-screen snap-center flex items-center justify-center"
   >
-    <div
-      class="md:mx-0 mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl w-3/4 md:w-3/5 h-full md:h-3/5 rounded overflow-hidden flex items-center justify-center"
+    <header
+      class="md:h-screen min-h-screen flex flex-col sm:flex-row sm:items-center sm:justify-between max-w-3xl gap-8 md:gap-2 snap-start md:pb-12 pb-8 p-4"
     >
-      <ImageGallery />
-    </div>
-    <div class="mt-8 max-w-lg 2xl:max-w-xl sm:my-0 sm:order-first w-full">
-      <div class="relative top-0 whitespace-nowrap">
-        <h1 class="mb-2 text-xl tracking-wide text-white">
-          Hello, I'm <span
-            class="relative group text-3xl md:text-4xl tracking-tight font-sans"
-          >
-            Enoch!
-            <span
-              class="absolute left-0 bottom-0 w-0 h-0.5 bg-skyblue transition-all duration-300 group-hover:w-11/12"
-            ></span>
-          </span>
+      <div
+        class="md:mx-0 mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl w-3/4 md:w-3/5 h-full md:h-3/5 rounded overflow-hidden flex items-center justify-center"
+      >
+        <ImageGallery />
+      </div>
+      <div class="mt-8 max-w-lg 2xl:max-w-xl sm:my-0 sm:order-first w-full">
+        <div class="relative top-0 whitespace-nowrap">
+          <h1 class="mb-2 text-xl tracking-wide text-white">
+            Hello, I'm <span
+              class="relative group text-3xl md:text-4xl tracking-tight font-sans"
+            >
+              Enoch!
+              <span
+                class="absolute left-0 bottom-0 w-0 h-0.5 bg-skyblue transition-all duration-300 group-hover:w-11/12"
+              ></span>
+            </span>
 
-          <span class="text-sm whitespace-nowrap">/enɒk/</span>
-        </h1>
-        <div class="flex space-x-4 mt-2 dark:text-lightGray">
-          <a href={linkedin} target="_blank" rel="noopener noreferrer">
-            <Icon name="mdi:linkedin" width="25" height="25" />
-          </a>
-          <a href={github} target="_blank" rel="noopener noreferrer">
-            <Icon name="mdi:github" width="25" height="25" />
-          </a>
-          <a
-            href="/resume/EnochMok_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon name="mdi:file-document-outline" width="25" height="25" />
-          </a>
+            <span class="text-sm whitespace-nowrap">/enɒk/</span>
+          </h1>
+          <div class="flex space-x-4 mt-2 dark:text-lightGray">
+            <a href={linkedin} target="_blank" rel="noopener noreferrer">
+              <Icon name="mdi:linkedin" width="25" height="25" />
+            </a>
+            <a href={github} target="_blank" rel="noopener noreferrer">
+              <Icon name="mdi:github" width="25" height="25" />
+            </a>
+            <a
+              href="/resume/EnochMok_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="mdi:file-document-outline" width="25" height="25" />
+            </a>
+          </div>
+        </div>
+        <blockquote
+          class="pt-6 text-base md:text-lg text-left italic font-medium text-zinc-600 dark:text-beige"
+        >
+          “Learning isn't a phase; it's a lifestyle.”
+        </blockquote>
+        <div
+          class="max-w-prose font-normal text-md md:text-md dark:text-lightGray text-zinc-600 sm:max-w-sm md:max-w-xl text-justify w-full pt-4"
+        >
+          <p>&#8203;</p>
+          <p>Datasets have stories. I tell them.</p>
+          <p>Processes have boring parts. I automate them.</p>
+          <p>Ideas have potential. I applicationize them.</p>
+          <p>&#8203;</p>
         </div>
       </div>
-      <blockquote
-        class="pt-6 text-base md:text-lg text-left italic font-medium text-zinc-600 dark:text-beige"
-      >
-        “Learning isn't a phase; it's a lifestyle.”
-      </blockquote>
-      <div
-        class="max-w-prose font-normal text-md md:text-md dark:text-lightGray text-zinc-600 sm:max-w-sm md:max-w-xl text-justify w-full pt-4"
-      >
-        <p>&#8203;</p>
-        <p>Datasets have stories. I tell them.</p>
-        <p>Processes have boring parts. I automate them.</p>
-        <p>Ideas have potential. I applicationize them.</p>
-        <p>&#8203;</p>
-      </div>
-    </div>
-  </header>
+    </header>
+  </section>
+  <!-- <hr class="my-hr" />
+  <section class="min-h-screen snap-start items-center justify-center">
+    <p class="text-white">Timeline</p>
+  </section> -->
   <hr class="my-hr" />
   <section
-    class="w-full md:pt-12 pt-8 snap-start"
+    class="w-full md:pt-12 md:m-4 pt-8 min-h-screen snap-start items-center justify-center"
     aria-labelledby="section-title"
   >
     <p
@@ -82,7 +90,14 @@ import ImageGallery from "@/components/ImageGallery.astro";
           const colors = ["#f7d1cd", "#c5e4c7", "#c3aed6"];
           const textColor = colors[index % colors.length];
           return (
-            <li class="flex flex-col mb-8 last:mb-0" id={category}>
+            <li
+              class={`flex flex-col mb-8 last:mb-0 ${
+                index === Object.entries(technologies).length - 1
+                  ? "snap-stop"
+                  : "snap-start"
+              }`}
+              id={category}
+            >
               <h3
                 class="mb-4 text-lg font-semibold tracking-tight"
                 style={{ color: textColor }}

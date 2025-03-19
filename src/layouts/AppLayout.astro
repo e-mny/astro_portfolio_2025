@@ -152,7 +152,7 @@ const allTags = [
   </head>
 
   <body
-    class="dark:bg-zinc-900 bg-zinc-100 antialiased selection:bg-blue-300 selection:text-zinc-900 dark:selection:bg-blue-600 dark:selection:text-white 2xl:text-lg flex flex-col min-h-screen"
+    class="dark:bg-zinc-900 bg-zinc-100 antialiased selection:bg-blue-300 selection:text-zinc-900 dark:selection:bg-blue-600 dark:selection:text-white 2xl:text-lg flex flex-col min-h-screen h-screen overflow-y-auto snap-y snap-mandatory"
   >
     <!-- Page Blur Effect -->
     <div
@@ -172,7 +172,7 @@ const allTags = [
     <NavBar />
 
     <main
-      class="flex-1 px-6 lg:px-0 mx-auto max-w-3xl flex flex-col w-full flex-grow overflow-y-auto snap-y snap-mandatory"
+      class="flex-1 px-6 lg:px-0 mx-auto max-w-3xl flex flex-col w-full"
       id="main-content"
     >
       <slot />
