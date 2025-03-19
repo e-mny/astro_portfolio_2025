@@ -12,7 +12,7 @@ import ImageGallery from "@/components/ImageGallery.astro";
 
 <AppLayout title="About">
   <header
-    class="sm:flex sm:items-center sm:justify-between max-w-3xl gap-8 md:gap-2 snap-start md:pb-12 pb-8"
+    class="h-screen flex flex-col sm:flex-row sm:items-center sm:justify-between max-w-3xl gap-8 md:gap-2 snap-start md:pb-12 pb-8"
   >
     <div
       class="md:mx-0 mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl w-3/4 md:w-3/5 h-full md:h-3/5 rounded overflow-hidden flex items-center justify-center"
@@ -66,7 +66,10 @@ import ImageGallery from "@/components/ImageGallery.astro";
     </div>
   </header>
   <hr class="my-hr" />
-  <section class="w-full md:pt-12 pt-8" aria-labelledby="section-title">
+  <section
+    class="w-full md:pt-12 pt-8 snap-start"
+    aria-labelledby="section-title"
+  >
     <p
       class="max-w-prose mb-8 text-xl font-bold dark:text-lightGray text-zinc-600 leading-tight underline underline-offset-2"
     >
@@ -87,7 +90,7 @@ import ImageGallery from "@/components/ImageGallery.astro";
                 {category}
               </h3>
               <div class="w-full">
-                <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3">
+                <ul class="grid grid-cols-2 gap-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3">
                   {techList.map((tech, _) => (
                     <Skill {...tech} />
                   ))}

@@ -27,13 +27,16 @@ const {
   description = defaultMeta.description,
   ogImage = defaultMeta.ogImage,
   pubDate,
-  tags = defaultMeta.keywords,
+  tags,
   lastmod,
 } = Astro.props;
 
 const ogImageURL = new URL(ogImage.src, Astro.site).href;
 const canonicalURL = new URL(Astro.url).href;
 const date = pubDate || lastmod || new Date();
+const allTags = [
+  ...new Set(tags?.flatMap((tag) => [...defaultMeta.keywords, tag])),
+];
 ---
 
 <!doctype html>
@@ -125,11 +128,14 @@ const date = pubDate || lastmod || new Date();
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/manifest.json" />
-    {tags && tags.map((tag) => <meta property="article:tag" content={tag} />)}
+    {
+      allTags &&
+        allTags.map((tag) => <meta property="article:tag" content={tag} />)
+    }
     <meta name="author" content={author} />
     <meta name="pubdate" content={(pubDate || new Date()).toString()} />
     <meta name="date" content={date.toString()} />
-    <meta name="keywords" content={tags.join(", ")} />
+    <meta name="keywords" content={allTags?.join(", ")} />
     <!-- <script>
       document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll("img").forEach((img) => {
@@ -146,7 +152,7 @@ const date = pubDate || lastmod || new Date();
   </head>
 
   <body
-    class="dark:bg-zinc-900 bg-zinc-100 antialiased selection:bg-blue-300 selection:text-zinc-900 dark:selection:bg-blue-600 dark:selection:text-white 2xl:text-lg flex flex-col"
+    class="dark:bg-zinc-900 bg-zinc-100 antialiased selection:bg-blue-300 selection:text-zinc-900 dark:selection:bg-blue-600 dark:selection:text-white 2xl:text-lg flex flex-col min-h-screen"
   >
     <!-- Page Blur Effect -->
     <div
@@ -166,7 +172,7 @@ const date = pubDate || lastmod || new Date();
     <NavBar />
 
     <main
-      class="px-6 lg:px-0 mx-auto max-w-3xl flex flex-col py-6 w-full min-h-full flex-grow"
+      class="flex-1 px-6 lg:px-0 mx-auto max-w-3xl flex flex-col w-full flex-grow overflow-y-auto snap-y snap-mandatory"
       id="main-content"
     >
       <slot />

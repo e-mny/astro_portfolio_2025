@@ -17,111 +17,112 @@ const allTags = [...new Set(projects.flatMap((project) => project.data.tags))];
   title="Tags"
   tags={["projects", "portfolio", "github", "developer", "tags"]}
 >
-  <Header title="Tags" />
+  <div class="m-6">
+    <Header title="Tags" />
 
-  <div class="py-6">
-    <!-- Tags Filter -->
-    <div class="flex flex-wrap gap-2 mb-6 ml-4">
-      {
-        allTags.map((tag) => (
-          <button
-            class="tag-button text-white dark:hover:border-blue-400 border-b-2 rounded-md dark:bg-zinc-700 bg-zinc-100 px-2 py-1"
-            data-tag={tag}
-            onclick="this.classList.toggle('dark:bg-blue-900'); this.classList.toggle('dark:bg-zinc-700')"
-          >
-            {tag}
-          </button>
-        ))
-      }
+    <div class="py-6">
+      <!-- Tags Filter -->
+      <div class="flex flex-wrap gap-2 mb-6 ml-4">
+        {
+          allTags.map((tag) => (
+            <button
+              class="tag-button text-white dark:hover:border-blue-400 border-b-2 rounded-md dark:bg-zinc-700 bg-zinc-100 px-2 py-1"
+              data-tag={tag}
+              onclick="this.classList.toggle('dark:bg-blue-900'); this.classList.toggle('dark:bg-zinc-700')"
+            >
+              {tag}
+            </button>
+          ))
+        }
+      </div>
+
+      <!-- Projects List -->
+      <ul id="projectList" class="space-y-6">
+        {
+          sortedProjectsByTime.map((project) => (
+            <ProjectListCard
+              title={project.data.title}
+              description={project.data.description}
+              slugUrl={`/projects/${project.slug}/`}
+              repoUrl={project.data.repoUrl}
+              tags={project.data.tags}
+              image={project.data.hero}
+              imageAlt={project.data.heroAlt}
+            />
+          ))
+        }
+      </ul>
     </div>
 
-    <!-- Projects List -->
-    <ul id="projectList" class="space-y-6">
-      {
-        sortedProjectsByTime.map((project) => (
-          <ProjectListCard
-            title={project.data.title}
-            description={project.data.description}
-            slugUrl={`/projects/${project.slug}/`}
-            repoUrl={project.data.repoUrl}
-            tags={project.data.tags}
-            image={project.data.hero}
-            imageAlt={project.data.heroAlt}
-          />
-        ))
-      }
-    </ul>
-  </div>
+    <!-- JavaScript for Filtering -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll(".tag-button");
+        const projects = document.querySelectorAll(".project-item");
+        const activeTags = new Set<string>();
 
-  <!-- JavaScript for Filtering -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const buttons = document.querySelectorAll(".tag-button");
-      const projects = document.querySelectorAll(".project-item");
-      const activeTags = new Set<string>();
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const selectedTag = button.getAttribute("data-tag");
 
-      buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const selectedTag = button.getAttribute("data-tag");
-
-          if (button.classList.contains("active")) {
-            button.classList.remove("active");
-            if (selectedTag) {
-              activeTags.delete(selectedTag);
+            if (button.classList.contains("active")) {
+              button.classList.remove("active");
+              if (selectedTag) {
+                activeTags.delete(selectedTag);
+              }
+            } else {
+              button.classList.add("active");
+              if (selectedTag) {
+                activeTags.add(selectedTag);
+              }
             }
-          } else {
-            button.classList.add("active");
-            if (selectedTag) {
-              activeTags.add(selectedTag);
-            }
-          }
-          const projectList = document.getElementById("projectList");
-          let hasVisibleProjects = false;
+            const projectList = document.getElementById("projectList");
+            let hasVisibleProjects = false;
 
-          if (activeTags.size === 0) {
-            projects.forEach((project) => {
-              (project as HTMLElement).style.opacity = "1";
-              (project as HTMLElement).style.display = "flex";
-            });
-            hasVisibleProjects = true;
-          } else {
-            projects.forEach((project) => {
-              (project as HTMLElement).style.opacity = "0";
-              (project as HTMLElement).style.display = "none";
-
-              const projectTags =
-                project.getAttribute("data-tags")?.split(",") || [];
-
-              if ([...activeTags].every((tag) => projectTags.includes(tag))) {
+            if (activeTags.size === 0) {
+              projects.forEach((project) => {
                 (project as HTMLElement).style.opacity = "1";
                 (project as HTMLElement).style.display = "flex";
-                hasVisibleProjects = true;
-              } else {
+              });
+              hasVisibleProjects = true;
+            } else {
+              projects.forEach((project) => {
                 (project as HTMLElement).style.opacity = "0";
                 (project as HTMLElement).style.display = "none";
-              }
-            });
-          }
 
-          if (!hasVisibleProjects) {
-            if (!document.getElementById("noProjectsMessage")) {
-              const noProjectsMessage = document.createElement("p");
-              noProjectsMessage.id = "noProjectsMessage";
-              noProjectsMessage.textContent = "No projects found.";
-              noProjectsMessage.className = "text-center text-lg text-gray-500";
-              projectList?.appendChild(noProjectsMessage);
+                const projectTags =
+                  project.getAttribute("data-tags")?.split(",") || [];
+
+                if ([...activeTags].every((tag) => projectTags.includes(tag))) {
+                  (project as HTMLElement).style.opacity = "1";
+                  (project as HTMLElement).style.display = "flex";
+                  hasVisibleProjects = true;
+                } else {
+                  (project as HTMLElement).style.opacity = "0";
+                  (project as HTMLElement).style.display = "none";
+                }
+              });
             }
-          } else {
-            const noProjectsMessage =
-              document.getElementById("noProjectsMessage");
-            if (noProjectsMessage) {
-              noProjectsMessage.remove();
+
+            if (!hasVisibleProjects) {
+              if (!document.getElementById("noProjectsMessage")) {
+                const noProjectsMessage = document.createElement("p");
+                noProjectsMessage.id = "noProjectsMessage";
+                noProjectsMessage.textContent = "No projects found.";
+                noProjectsMessage.className =
+                  "text-center text-lg text-gray-500";
+                projectList?.appendChild(noProjectsMessage);
+              }
+            } else {
+              const noProjectsMessage =
+                document.getElementById("noProjectsMessage");
+              if (noProjectsMessage) {
+                noProjectsMessage.remove();
+              }
             }
-          }
+          });
         });
       });
-    });
-  </script>
-
-  <!-- Styles -->
+    </script>
+  </div>
 </AppLayout>
