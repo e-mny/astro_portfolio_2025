@@ -21,11 +21,8 @@
 
 ### Optional Features
 
-- [x] Google Analytics for Traffic Monitoring
-- [ ] Footer to always stay at the bottom for all pages
 - [ ] Search Feature
 - [ ] Toggling Dark Mode
-- [ ] In 'about' page, snap sections to scrolls
 - [ ] In 'about' page, when hovering over each phrase, a box will move to cover that phrase, to show what I will do.
       For eg: Datasets have stories - [ I tell them ]
 - [ ] Show live stats for Fitlah Bot
@@ -37,6 +34,9 @@
 - [ ] Create an LLM copy that will allow user to ask question about me. (not sure if that is possible with static website)
       Allow users to navigate through the website if he doesn't want to use the LLM to ask questions
 - [ ] Custom Domain Name Setup
+- [x] Google Analytics for Traffic Monitoring
+- [x] Footer to always stay at the bottom for all pages
+- [x] In 'about' page, snap sections to scrolls
 - [x] Image Gallery
 
 ### Bugs
